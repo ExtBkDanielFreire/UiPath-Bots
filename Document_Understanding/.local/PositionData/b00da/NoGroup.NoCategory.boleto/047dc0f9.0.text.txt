@@ -1,0 +1,101 @@
+88 Multiplan
+
+SACADO          : BK BRASIL OPERACAO E ASSESSORIA A   Limite para Pagamento
+NOME FANTASIA   : BURGER KING                         05.09.2022           
+CNPJ / CPF      : 13.574.594/0001-96                  Nosso Número         
+
+NÚMER0 DA LOJA
+
+NOTA DE DÉBITO / RECIBO DO SACADO CEDENTE : Multiplan Arrecadadora Ltda
+
+ENDEREÇO: Avenida das Américas 4.200 Barra da Tijuca
+
+CNPJ : 14.551.970/0001-90
+
+BRADESCO
+
+: 316/317
+
+Agência/Código Cliente
+
+009-22000032147-0
+
+2373-6 / 32546-5
+
+Documento
+
+SSU2092600
+
+Comp. Valor Parcial - R$ Valor Total - R$
+
+Fundo de Promoção      *01.08.2022-31.08.2022-Fundo de Promoção   08/2022   3.519,03    3.519,03 
+Dif. Fundo de Promoç   *01.08.2022-31.08.2022-(-) Dif. Fundo de   08/2022   -985,33     -985,33  
+Aluguel Mínimo         *01.08.2022-31.08.2022-Aluguel Mínimo      08/2022   23.298,57   23.298,57
+Encargos Comum         *01.09.2022-30.09.2022-Encargos Comuns     09/2022   16.820,00   16.820,00
+Ar Condicionado        *01.09.2022-30.09.2022-Ar Condicionado     09/2022   1.291,67    1.291,67 
+Enegia Elétrica        *01.08.2022-31.08.2022-Energia Elétrica    08/2022   12.394,35   12.394,35
+Água / Esgoto          *01.08.2022-31.08.2022-Água / Esgoto       08/2022   1.274,20    1.274,20 
+Serviços               *01.08.2022-31.08.2022-Serviços            08/2022   388,22      388,22   
+IPTU                   *01.09.2022-30.09.2022-IPTU                09/2022   234,91      234,91   
+
+Mensagens / Observações VALORES EXPRESSOS EM REAL. ==================================== APÓS O VENCIMENTO COBRAR R$ 97,06 POR DIA DE ATRASO NÃO RECEBER APÓS 15.09.2022
+
+BRADESCO
+
+Cedente Multiplan Arrecadadora Ltda
+
+237-2
+
+Data do Doc.
+11.08.2022
+
+Num.Documento SSU2092600
+
+Espécie doc. DM
+
+N° da Conta / Resp Carteira Espécie Quantidade 009 R$ Instruções NÃO RECEBER APÓS 15.09.2022 ==================================== APÓS O VENCIMENTO COBRAR R$ 97,06 POR DIA DE ATRASO ESTE BOLETO NÃO QUITA DÉBITOS ANTERIORES
+
+Total Mora Multa
+
+58.235,62
+
+Valor Cobrado
+
+Ficha de Caixa
+
+Agência / Código Cedente
+
+Vencimento
+
+2373-6 / 32546-5
+
+05.09.2022
+
+Aceite
+
+Data do Processamento
+
+Nosso Número
+
+N
+
+11.08.2022 Valor
+
+009-22000032147-0 (=) Valor do Documento 58.235,62 (-) Desconto
+
+(-) Outras Deduções / Abatimento
+
+(+) Mora / Multa / Juros (=) Valor Cobrado
+
+BRADESCO 237-2 23792.37304.92200.003215.47003.254605.7.90990005823562                                                                                                                                                                                               
+Local Pagamento EM QUALQUER BANCO ATÉ O VENCIMENTO-PREFERENCIALMENTE NAS AGÊNCIAS DO BRADESCO                                                                              Vencimento 05.09.2022                                                                    
+Cedente Multiplan Arrecadadora Ltda                                                                                                                                        Agência / Código Cliente 2373-6 / 32546-5                                                
+Data do Doc. Num.Documento Espécie doc. Aceite Data do Processamento 11.08.2022 SSU2092600 DM N 11.08.2022                                                                 Nosso Número 009-22000032147-0                                                           
+N° da Conta / Resp Carteira Espécie Quantidade Valor 009 R$                                                                                                                (=) Valor do Documento 58.235,62                                                         
+Instruções NÃO RECEBER APÓS 15.09.2022 ==================================== APÓS O VENCIMENTO COBRAR R$ 97,06 POR DIA DE ATRASO ESTE BOLETO NÃO QUITA DÉBITOS ANTERIORES   (-) Desconto (-) Outras Deduções / Abatimento (+ ) Mora / Multa / Juros (=) Valor Cobrado
+
+Sacado BK BRASIL OPERACAO E ASSESSORIA A Fantasia : BURGER KING Número da Loja : 316/317
+
+CPF/CNPJ do Sacado CNPJ: 13.574.594/0001-96 Código de Baixa
+
+¿

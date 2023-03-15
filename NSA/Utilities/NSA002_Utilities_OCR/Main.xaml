@@ -1,0 +1,169 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1008,500" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="40">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>Microsoft.Graph</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Models</x:String>
+      <x:String>UiPath.Shared.Services.Graph.Mail.Models</x:String>
+      <x:String>UiPath.Mail.Activities.Business.ForEachMail</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph.Core</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="400,325" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="3fc006f9-65cd-4eb2-9838-04327823cc6b" Name="AppID" />
+      <Variable x:TypeArguments="x:String" Default="64587785-97bc-48f0-83e2-1e7a6597212e" Name="Tenant" />
+      <Variable x:TypeArguments="x:String" Default="P6S8Q~0Dl1mbdWNH-SOxn2Ku2QX5llIS8R_9PbA" Name="AppSecret" />
+      <Variable x:TypeArguments="x:String" Name="strCNPJ_BK" />
+      <Variable x:TypeArguments="x:String" Name="strText">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" xml:space="preserve">Fatura de Serviços de Água e/ou Esgotos C.N.P.J. 43.776.517.0001-80 DISCRIMINAÇÃO DO FATURAMENTO
+Companhia de saneamento básico do estado de São Paulo Água: 193,50
+Sabesp Esgoto: 193,50
+Taxa de regulação (TRCF) - 0,50% 1,93
+Fornecimento No. Documento Fatura Tipo DATA EMISSÃO
+1024788641002 SOR202293052505 FATURAMENTO 10/09/2022 TOTAL: R$ *******************388,93
+Código para débito automático:  1024788641 Pág. 1 / 1 VENCIMENTO: 15/10/2022
+Tipo de Fornecimento: COMERCIAL
+Agende seu atendimento: www.poupatempo.sp.gov.br - Seg a sex: 9h às 17h/Sáb: 9h às
+13h
+Cliente: BK BRASIL OPERA E ASSESSORIA A RESTAURAN No caso de pagamento em atraso serão cobradas Multa de 2%
+mais Atualização Monetária com base na variação do IPCA /IBGE
+CEP:  09070200        End:  ALAMEDA CAMPESTRE,459 -  - CAMPESTRE () - SANTO ANDRE do mês anterior mais Juros de Mora de 0,033% ao dia
+- SP *Oferecemos datas opcionais de vencimento para sua fatura
+01-05-10-15-20-25.
+Cód.Cliente: 2159021629 Havendo interesse entre em contato com a Sabesp.
+Pde/Rgi: 941636933 Hidrômetro: Y16S778518
+
+Economias: COM: 1 Tipo de Ligação (TL): ÁGUA E ESGOTO
+Data da apresentação: 13/09/2022 Próxima Leitura: 11/10/2022 Tipo Mercado: COMUM
+Condição de Leitura IMÓVEL NÃO LOCALIZADO
+Leitura Anterior Leitura Atual Consumo (M3) Período Média (M3)
+Água: 30/09/21 107 20 30 20,25
+
+Água Esgoto
+(M3 x Nro.Econ.) (M3) Tarifa (R$) Valor (R$) (M3) Tarifa (R$) Valor (R$)
+De 0,00 até 10 Mínimo 6,570 65,700 Mínimo 6,570 65,700
+De 11,00 até 20 10 12,780 127,80 10 12,780 127,80
+Subtotal  193,50 193,50
+TOTAL  (Vl Água + Vl Esgoto) 387,00
+
+Histórico de Consumo (Data de emissão, Consumo em M3 e Tipo) Atendimento Sabesp
+12/05/2022 11/06/2022 12/07/2022 11/08/2022 STO ANDRE CENTRO End.: RUA GIOVANNI BATTISTA PIRELLI ;
+Água: 61(MA) 20(MA) 21(MA) 20(MA) Dias e horários: DE SEG A SEX, DAS 155 ; SANTO ANDRE ; SÃO PAULO
+08H AS 17H, Para atendimento, acesse Telefone: 0800-055-0195
+nossos canais digitais ou agende seu
+atendime
+
+AVISOS
+
+Tributos Alíquota(%) Base de Cálculo(R$) Valor(R$)
+PIS/PASEP E COFINS 6,90 388,93 26,85
+Qualidade da Água: Decreto Presidencial 5440/05 - Portaria do Ministério da Saúde 5/17 - Anexo XX
+Parâmetros Turbidez Cor Cloro Coli. Totais Escherichia Coli.
+Mínimo Exigido
+Análises Realizadas
+Amostras que atendem ao Padrão
+Conclusão das Análises:
+
+Sistema de Abastecimento: Amostras coletadas em:
+
+82620000003 0  88930097091 6  04507015839 4  21590216293 6
+43.776.517/0001-01
+9104507015839
+VIA SABESP ATENÇÃO: Não danifique a região do código de barras.
+Cod. Fornecimento PDE/RGI Data Emissão Vencimento Total
+1024788641002 1024788641 10/09/2022 15/10/2022 R$ *******************388,93
+Cod. Sabesp:626.315.006.0136.0011.0000.0000
+Autenticação do agente autorizado</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="cnpj" />
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="ieNumInstalacao" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:Matches BuilderPattern="(?&lt;=Rgi: )\w*" sap:VirtualizedContainerService.HintSize="338,69" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[strText]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=Rgi: )\\w*&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=Rgi: )\w*" RegexOption="IgnoreCase, Compiled" Result="[ieNumInstalacao]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="338,94" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[ieNumInstalacao(0).ToString]" />
+  </Sequence>
+</Activity>

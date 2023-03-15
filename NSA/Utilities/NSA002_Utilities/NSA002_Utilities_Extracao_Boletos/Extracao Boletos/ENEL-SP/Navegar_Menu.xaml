@@ -1,0 +1,319 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Navegar_Menu" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="strNumInstalacao" Type="InArgument(x:String)" />
+    <x:Property Name="strOutError" Type="OutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1098,761</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Navegar_Menu_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="35">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Navegar_Menu" sap:VirtualizedContainerService.HintSize="502,696" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="440,574" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Enel | Agência virtual" sap:VirtualizedContainerService.HintSize="315,61" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="c0c0a1f0-2e60-4396-a0df-8d733807a8dc" Version="V2">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1432,3110" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NClick ClickType="Single" DelayBefore="2" DisplayName="Click - Selecionar Segunda Linha" sap:VirtualizedContainerService.HintSize="1370,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c0c0a1f0-2e60-4396-a0df-8d733807a8dc" Version="V1">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/trocar-instalacao" DesignTimeRectangle="216, 470, 16, 16" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='4' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='DIV' class='md-off' aaname='' /&gt;" Guid="2685508f-ee67-43c2-8ec7-c61b12f5512c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADgSURBVDhPvZOxDcIwEEVpKDIJEqtQI9gBRM0ATEHLMFQMQMEgxJAjL9I3xthRFBmeZMk63/18ny8TK8z/BM/XxjbHh813zqpVbdW67vbEOMuRFKRouqx7FzkpvgQXB+eL9qenXW6N3Z11iz0xnZMb8yEoZ7Ot64pzcEYOubFTL0hf9OU+MUGO8sOeekG540pD0fVDl16QFxzqTsgltcILMhYc0vyhkEsNYyXegm1wtGBrRvzuysUfpfjYgFwWGWxR9NcTctq3YmciKQj0hSJekLFgrNgTC3sWkxUcS2FBsxfiSqfwr3yz2wAAAABJRU5ErkJggg==" InformativeScreenshot="9d94284d30e36789ec9535d83b278fec.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="Selector, Image" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="338, 456, 567, 41" ElementType="Text" FriendlyName="'13574594'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableCol='3' tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' class='' tag='TD' aaname='13574594' check:innerText='13574594' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAjsAAAAtCAYAAABIxqr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQvSURBVHhe7dvNa9tYGMXh/LXCIALCBAqmRAFtTBddiIIJmCGmkE2yyCIemC5iGFyKsxAEQx0YAiUQl+ChIIpJEZgz90qyrahuV+5QX34PHIh89eHsDu+V9wQAAOCwvSRJRAghhBDiapjsAAAAp1F2AACA0yg7AADAaZQdAADgNMoOAABwGmUHAAA4jbIDAACcRtkBAABOo+wAAACnUXYAAIDTKDsAAMBplB0AAOA0yg4AAHAaZQcAADiNsgMAAJxG2QEAAE7bYtmZaxh78o6T8rgwu+4pavryPE9+M1LvelauWKkGr8w1Zm2Vw76mZiU5rn1eJry0q6XFVP3Ift5R9amTt0Htusr6ItX4vK0Dv1jzj3oa/Vuu1c0TdZrmvPI7AQCA3bOdsvO5r3BZLKpl58s7RV6oi/ssP8xuT9Xy2hqk+aExUS+I1H8sD38iu+kqaMQazssPTLlKjgMFUaSDZ2WnKFDdm/Kw5v68ZcrLqSb5d8g0u4oVNHuaLPLltbxI+YqikLIDAMAO207ZWWSaf800stOYatnJ5krTuakUhfSmp5YpLKNvyw8GansthUfryc/peNVm1hamFDU9xe/Xa9PLSH5kSsiDLVrVsmMLVKDW0YF8W772W4qvllXFFJjD2nTIXNkx5z0vR2WRMv/LPOlQdgAA2GFbfWcn33qqbWPlVpMfX+2/KrXhY09BEGvwaOtQpvRDR0EjUv9zsbyUb0u9Gmg5ELIFJGiagmO7T37vStnJC1So09vi7OzThaJGYMpMUbk2TnbMd2tfrcZN6yJlpz2UHQAAdtr/U3ZK2eNAcRCo97H84DtTXbz0FP1Zea/n7kytRluDL+XxQ1+RbwrRQ3lcLzsbjDrme/0xLg4WM41OIgX2nZ2Gr/Ckr96hp055g2dFyqLsAACw035p2ZldvdbB27Jk5DKN3qy3kdKbC3Wv7vK/C8U207rsFOcHJ+t7/OjFZZu8sHwaqHuerKZAVn5NXnYyTccj3S2LkzUf6rUXltOk4vmb7u2tzgEAALvk10527u1UJtJZbUtpNdkp14sXmJfbWJUpjsbqVs83snmqNK3k1tzDizU0f8/tbb6NFJtrOtebn5lvY0UXurfvDWUzDd883yLLvtbu/3cs7+WZJvbdo/pLzAAA4Le3lbIzvQy/m4QspzfVn557+2Htp+d2unOqcL+4xn8Rq/9P5QXlx37+a66fTlQ2bGNl9+8Uv/jBM/NtrFB+wz7T10Hc192Gd6JX2MYCAGCnbXWyAwAA8Luh7AAAAKdRdgAAgNMoOwAAwGmUHQAA4DTKDgAAcBplBwAAOI2yAwAAnEbZAQAATqPsAAAAp1F2AACA0yg7AADAaZQdAADgNMoOAABwGmUHAAA4jbIDAACctpckiQghhBBCXM3e09OTCCGEEEJcDWWHEEIIIQ7nSf8BGSXhPd0b1sQAAAAASUVORK5CYII=" SearchSteps="Selector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NClick.Target>
+                </uix:NClick>
+                <uix:NClick ClickType="Single" DisplayName="Click - Botão SEGUINTE" sap:VirtualizedContainerService.HintSize="1370,166" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c0c0a1f0-2e60-4396-a0df-8d733807a8dc" Version="V1">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/trocar-instalacao" DesignTimeRectangle="833, 562, 270, 40" ElementType="Button" FriendlyName="'SEGUINTE &gt;&gt;'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='aes-button stretch md-button md-ink-ripple' aaname='SEGUINTE &amp;gt;&amp;gt;' check:innerText='SEGUINTE &amp;gt;&amp;gt;' /&gt;" Guid="874aa543-7db9-4711-9750-af95b8132378" ImageBase64="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" InformativeScreenshot="bd1664cb427d6c745d58e99cd93d8849.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="954, 507, 38, 30" ElementType="Text" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl aaname='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='1' tag='A' type='' class='active' check:innerText='1' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAiCAYAAAApkEs2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADeSURBVFhH7dgxCoMwFMbxnjYnKO0RpHu39grOhYJjcSiY1dHVE2R85UOUtHlQLM8mD97wn4zmlxAH3YUQSEN6oeM4Ut/35L2nruv+GubE3DB8ut6gwzCwD8gRLLFtgWIV3A05i3d2gWLLucE5gymB5jiT34IpgXIDS8ig0hlUOoPezntyhys1zLVf2gBaU+UcOVQ29Ento6X75Vg6dKoxqEH562uTh9bV9MbHnWp+7IrkoRtlUOkMKp1eqJqPOzWfy2p+QCAVv3TmsApseY4zizkxd7yTcwm01JRAA70A2f+H9G4t4uwAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NClick.Target>
+                </uix:NClick>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="3" DisplayName="Type Into 'Filtre por' - Digita num instalação" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1370,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="c0c0a1f0-2e60-4396-a0df-8d733807a8dc" Text="[strNumInstalacao]" Version="V1">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/selecionar-cnpj-corp" DesignTimeRectangle="541, 298, 189, 26" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='ng-pristine ng-untouched ng-valid ng-empty' aaname='' /&gt;" Guid="83bd9d25-c5fa-4227-a4e7-9e53a36b9fd1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMEAAAAeCAYAAACVKnpmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANjSURBVHhe7ZxRa/IwFIa////j9EKQ6i6KOi+mIEwEwQvz9YlNm6SnrVPHbHpeOLC2aZLB8/acNN3+nc9no6Ex5lATaIw+7jbB4XAw6/XaLBYLM5vNzHQ6NZPJREPjLQIe4RI+4RReJY6l6DXBfr+3Hc/nc7Pdbs3xeDSXy8Vcr1ejUr2L4BEu4RNO4RVu4Vfi2o9OE+R5bjvDVSrV0AS38AvHEt8uRBOcTifrotVqpU981aAFv3AMz3At8S6agBtIKSpVKoJnuJZ4b5iA1IFzVKrUBNdSaRSYgEUENZSWQKoUBdfwHS+WAxOQLsa9CP42m4/MZFlm8q/i6HNpsnxXXlOlIPiOy6LKBG4l/bh2Ji/heVpfuck+NgWS9+iF435vzNKOG5pBlZbcG8+GCdhgeG4xnIAJVKMQnMN7wwSkCDYaHlcEI0/VLDcbSorivI0A7Fv76porOzBAdT4vWqH6yexi+el6ik3Q1Ra1jIvsnL1r2dJsAieG94b9qoYiOPdLosoEbDmz4/a4JBMUsFSQ3a7fwLmBWkMUHQeZoITag9XW6hWg/rh9bTvGLefbMFM1D3/+0rFqKIJzeG+YgG8vnnsrJJkgfJLucgdoDGOkvnIo6DsaN5bf1mYZl136ZQ1UzsP/udIP+1O9h+Ac3v/YBIX8skeCSzCBvd/d02MCqa0IckO3/qp7y/bB3J3s76gmGJpaTfA75VCHCZxsuxI43yAerBXQ7lzQdzhuV9tuE9Twuwzlt1cTpKPWcuh3FsZ3mMDJLy0CE9Bv2E+7CXra+mPEErKPlkNpqnVh/PJXpJ0maK4JAoM0TOD1Wx7L5VBf245xY6DtcXEtmkd9b3ysGopaX5G+fLOsLxPY6wBaRvCUjeB1QFbnfACjcTvbItd3Gd64dn7+eduX/zuE96oBhqnWzTKCFMHF5IUB28oyVdKCb78UIgITjOoDOp7yQfZRpS64hu/OD+iI9D+lrksaLWfGpbs+pXZBunhukaxSvZfgOS6DXIgm0D+vVKUi+IVjeP7Rn1e6IHW4lbRKNTS5N55SCeRHpwkIFhG4iM5IKWw0sOOmGUL1ToJHuIRPOIVXuI0XwVL0msAFrmKDgY7ZcubbC+mfIGlo/EXAI1zCJ5zCq8SxFHebQEMj1VATaIw8zuY/d8RlshvAVOwAAAAASUVORK5CYII=" InformativeScreenshot="01028bee926cd6778703a6c107843909.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="475, 303, 61, 17" ElementType="Text" FriendlyName="'Filtre por'" FullSelectorArgument="&lt;webctrl aaname='Filtre por:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Filtre por:' tag='LABEL' type='' class='' check:innerText='Filtre por:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAVCAYAAAAZ6IOkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJpSURBVFhH7ZUxa9tAFMf7Ue5D3Gi6mCxZ7NFkEHQwZDAFYwrBdDFZTMCYLiZQtBjTRYaCMnkoeFOgqJMyFGUw3BA0BDQENP77dHdSTpbcmKYJCdHwh/N7797d/fTe87skSfDWVUMg1RBINQRSDYFkQPAwZQysQtNL8l9Oad2Fs6H1xkE3WxvJXqtKELrzAFEUFRTfkf8uVus0tgRB7ZWw8nyvR2UIS1EIqNSbhWA+3FiLZbfUPjKHjrGXM1jvyX7sQFCe+MrB6EMTnOL4gYXRMlDVtSWZ99jGajlS+1kD1skCfmTE3QZwTi00ufK3+zOsxb3fm5D9zIH7SZ0nP9JtWt3xfQ7SoyEkcZp0hTHtHa90C8VZDEejTxcX+uCNix7n6M19CIoTvxwMW/T7e/lMBZejc+YiSPdfe7A/crDWDL6M8TFrMcpvw7smvwiw+mKB8x5cXaESAu/QvULVytTW0qY/SHbWg4MxL/FdEIy9hXbQEEybf34I1ncRZTGk6GIAdrRAaNhSSQhHNgLTfuNikOb8SRX1Y0QPHGOdAs9jQiwshsNzX/6uenCVHhyMciim/n+CYMboS2m4RU3hZfu0JISJV7Bl5wwuqIpku5QfKM/Q+8z13/T4dpD+/SCE8w7YiStbIQctQoS/RaE6Uv23Sng+COrw9mStHpjPhCKE5GaFIW9j+M1DKAH4cD63wawd7VA1E/LYPWfCNoQnGYzaH18tMDigS2Y5qiCkEmvM+m00KI7xJqxTB4E58bVUudtwv/by6V+K3effYQuCtO0ejC9Lu3r+KVRDINUQSC8WwnOqhkCqISQJ/gAKwEp4Nw8F3gAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NClick ClickType="Single" DelayBefore="2" DisplayName="Click - Seleciona Registro filtrado por instalação" sap:VirtualizedContainerService.HintSize="1370,166" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c0c0a1f0-2e60-4396-a0df-8d733807a8dc" Version="V1">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/selecionar-cnpj-corp" DesignTimeRectangle="216, 399, 16, 16" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='2' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='DIV' class='md-off' aaname='' /&gt;" Guid="848d88e0-c9bd-459e-a688-6977b3bc2da6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADgSURBVDhPvZOxDcIwEEVpKDIJEqtQI9gBRM0ATEHLMFQMQMEgxJAjL9I3xthRFBmeZMk63/18ny8TK8z/BM/XxjbHh813zqpVbdW67vbEOMuRFKRouqx7FzkpvgQXB+eL9qenXW6N3Z11iz0xnZMb8yEoZ7Ot64pzcEYOubFTL0hf9OU+MUGO8sOeekG540pD0fVDl16QFxzqTsgltcILMhYc0vyhkEsNYyXegm1wtGBrRvzuysUfpfjYgFwWGWxR9NcTctq3YmciKQj0hSJekLFgrNgTC3sWkxUcS2FBsxfiSqfwr3yz2wAAAABJRU5ErkJggg==" InformativeScreenshot="8f99038159b8de3bd29bcd1c472f027f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="Selector, Image" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="284, 397, 17, 16" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='aes-icon aes-favorite' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG0SURBVDhPxZQ9T8JQFIb9a0xOTGxM7mxMTExuTkz8ACYmJwYQCDFqmpD4FasRYoJG+3krQkGosXk9V44RLi01McZnO+c2z+35aLfwB/yjNByhcujidMZxAj+SerqFVN3AzrnPmc0kS8MxKm0DhRMb6QMXesj5DSRKg56N7bbAIPRRJXlen/JJPAnSVZF/+3XBZxjLtzQM4D29QLsWKHVt5FsmMg0DqeWSaWDlJuUaJrItC7tdB5XrIbSHCYKli76ljy4yNIxU08JeV6DWH0K3X+HP3/kBZj6Db9PlfQ8VkhapEjnE8j2fE0vlv8O4sUhsoWq/cS4BRyBHwtzlhBMLlJ6S+NLCNon3HeUNVUiYp/aoQknEoH4gFs8oUm9zF9F7GyGVTFDt0G7evHKscGcj1REwOFSJkdLCtwyUBhyqTKcwJgEH60RLxx4KsnyPY29IkxbQXBa9vaDUslH7OleIlpoC2bqDU3+E/ROT+kv9O7IoZyB7LKCP6AezoZJIaUBfjtw9KZOSns8Do0tqmhzi4ix3tT55SaRU/pXSHQeaF7Ov1I4yDXLnbMyJVWIG9Tv+QAp8AJPKR2BubfnQAAAAAElFTkSuQmCC" SearchSteps="Selector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NClick.Target>
+                </uix:NClick>
+                <uix:NClick ClickType="Single" DisplayName="Click - Botão ENTRAR" sap:VirtualizedContainerService.HintSize="1370,166" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c0c0a1f0-2e60-4396-a0df-8d733807a8dc" Version="V1">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/selecionar-cnpj-corp" DesignTimeRectangle="833, 491, 270, 40" ElementType="Button" FriendlyName="'Entrar'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='aes-button stretch md-button md-ink-ripple' aaname='Entrar' check:innerText='ENTRAR' /&gt;" Guid="e1b3a873-79b5-48bf-b5c1-a3bed1a7aa6e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARIAAAAsCAYAAACpMDdKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASXSURBVHhe7d0xaxRBGMZxv0HwA9jbpvBbWNiltFEEQQQRUdFCIYJgo6AIIkQ4iGgRQSGYIkgsFMFGRAmYQgsJmiKFcupJxvfZ7N7N7b27t5ez2L37L/ww2dm9jcj7ODM7u9nXbrcDAIyDIAEwtrGD5PeL96Fz7Un4O3cr7By6FMKBUyHsPx7CzDEAdaPatBpVrapmVbuqYa+2R7GnIPn14UvoXHwYdg6e9X9YAI2iWlZNq7a9mh9mpCD59eVb+Hv6gfuDAJgMqnHVupcBRSoHyZ/7q7vDFufCACaM1bpq3ssCT6UgoRcCTCfVvpcJeUODRBMy3gUATAdlgJcNsdIgIUQAyLAwKQwShjMAYmXDHDdIkolV54MATLeiCdiBINFtH+7OAHBZNni3hgeChCENgDLeEKcvSLSqzTsRAGL5FbB9QaIlst5JABBTVsTZ0RckPDsDoAplRZwd3SDRE4DeCaix9eBv6y+j9j8hXD/ff17rq+3/GcIF+3rN/izc7Lii62xZ25nc5yaehfDD2jffDbZd+Lh7brx17PprzwePRe3FTw13g0SPE3sHo8ZU4NufQjhxr9/c1V67tm0r4NnovDhIDt/pnfdGofI9+qyb/nXOrVpQ2L725/7Plbu2L9kswOZzbVmQLGWfbxb1s9i2vNB/LGpPmTEQJKxibaCkwK04vTZR++Z2Uqdh9VFvfxwk8fFJ7yTthcS861xOQ+F2tG/mRggbtm/D2hQ073I9jSxIWtG+GevV6ByvB4Nai1e7doMkeSmRczBqrEqQqP2N9Q7U05hL9//PIFmI9h15vbuvZeGwbAHWyfVYyoJkq+TvgVpSZgwECYvQGkgFnt+y+ZGsXQEwaz0D+ycOG1bo2j9ukMzakGTdwik/tFmJwiMLlcfWS8navSCZT/cxtGkey4zBIOH1iM2TFHhujiSbH+m2pwGwoPCw4r9tPYC9BEl+61hoXImuNWNDJ42iXi2l39t1bLQSPr/tHeNNtmr7EIUfmsMygyCZBPmeQl5f+83dIcQPC55kgnPUHklusnUr/mwzb+3uZulyMj3Gm2x9akMuba2o54JmcIOEoU3zjBQkZs56B9q2FRijBknuOosKADv+nL5Pex+bdkwWEAkLHN0Kznop7hxJ2pOhV9I83tCGydYGyvcUMkfT/929ANAkaLKNGSTJZGv6GbMWAtpWnHkOTfSqF6SvyyZb47kdNII72crt3wZSgXtbVvReAKgHoGHJuEGShYLu2jxW7yQawsSup0OeuxYYbpAYfT53bRrHvf3LgjQAo3AXpLFEHsAo3CXywkN7AKoofGhPeI0AgCpKXyPAi40AVFH6YiPhVYsAygx91aLw8mcAhSwbKr38Wfh1FAA8lX8dRYYhDoCYN6TJFAaJsNoVgMSrWD2lQSKECTDdhoWIDA0SYZgDTKey4UysUpBIMgHL3RxgOlitF02seioHiei2D70TYLKpxr1bvGVGCpKMVrVpiSzP5gCTQbWsms6vWK1qT0ES0xOAepxYEzLJy5E0/OG1jUA9qTatRlWrqlnVbvwU716NHSQAQJAAGFM7/AOkA4SBYkgdOwAAAABJRU5ErkJggg==" InformativeScreenshot="ffe189632c297a73687305c63c22db57.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="954, 436, 38, 30" ElementType="Text" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl aaname='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='1' tag='A' type='' class='active' check:innerText='1' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAiCAYAAAApkEs2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADeSURBVFhH7dgxCoMwFMbxnjYnKO0RpHu39grOhYJjcSiY1dHVE2R85UOUtHlQLM8mD97wn4zmlxAH3YUQSEN6oeM4Ut/35L2nruv+GubE3DB8ut6gwzCwD8gRLLFtgWIV3A05i3d2gWLLucE5gymB5jiT34IpgXIDS8ig0hlUOoPezntyhys1zLVf2gBaU+UcOVQ29Ento6X75Vg6dKoxqEH562uTh9bV9MbHnWp+7IrkoRtlUOkMKp1eqJqPOzWfy2p+QCAVv3TmsApseY4zizkxd7yTcwm01JRAA70A2f+H9G4t4uwAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NClick.Target>
+                </uix:NClick>
+                <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Minha Conta'" sap:VirtualizedContainerService.HintSize="1370,1896" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="c0c0a1f0-2e60-4396-a0df-8d733807a8dc" Timeout="10" Version="V1">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,225" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,101" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Acessou parte do site para download Boleto&quot;]" />
+                    </Sequence>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.IfNotExists>
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="916,1670" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="854,101" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Não conseguiu acessar parte do site para download Boleto&quot;]" />
+                      <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Seu cadastro'" sap:VirtualizedContainerService.HintSize="854,1407" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="c0c0a1f0-2e60-4396-a0df-8d733807a8dc" Version="V1">
+                        <uix:NCheckState.IfExists>
+                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,1181" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="strCadastroInativo" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NGetText DisplayName="Get Text 'Seu cadastro'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="c0c0a1f0-2e60-4396-a0df-8d733807a8dc" Version="V1">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/selecionar-cnpj-corp" DesignTimeRectangle="718, 586, 500, 19" ElementType="Text" FriendlyName="'Seu cadastro'" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='dialogContent_30' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' parentid='dialogContent_30' tag='SPAN' type='' class='' /&gt;" Guid="8da14511-a770-4b65-9abc-66083a045d58" InformativeScreenshot="770925f19c1417cfd0af976dce1fe5f7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="813, 640, 310, 40" ElementType="Button" FriendlyName="'Entendi'" FullSelectorArgument="&lt;webctrl parentid='dialogContent_30' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='dialogContent_30' tag='BUTTON' type='button' class='text-color-btn md-button md-ink-ripple' aaname='Entendi' check:innerText='ENTENDI' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAToAAAAsCAYAAAD1unRuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAS+SURBVHhe7d2/ixxlAIdx/wMRrASxEUGxE60UCwv9G8RKEmw0GEUtNIJKINorSCo9OwWDiAQsI4EYi4ggRo1gkWhAosEYDCH31YeZYecmM7sze3vJzs3zgSHc7d7MFceT+fG+794SSdrlDJ2kXW/7oTv+Y/LO58mT7yYPHUjufC65bW9y6x43Nze3YRvtoCG0hKbQFhqzTcuF7sz55PVPkntfSh59KznwcXLkm+T7s8nFy8m1zfKNkjQA7aAhtISm0BYaQ2toDu1ZwrDQnb+YvPBRcsezxS/ALyNJO43W0BzaQ4No0QD9Q/fhseKUkoNRXEm60WgPDaJFNKmnfqGjoJw+fn2m/IYk3US0iCbRph4Wh44bgnsPe99N0nqhSbSJRi0wP3TsYP9G+YUkrSEatSB23aHjlJBaStK6o1VzLmPbQ8dNPq5/vVyVNAa0imZ1PKC4PnQ8tuWJhg8eJI0JzaJdLUNPrg8dp388vpWksaFdLZewW0PHqGMG5DlOTtIY0S4a1phBsTV0TLHwbE7SmNEwWlazNXTMJ3Nal6Qxo2G0rGYWOlYI4KmFpmfjWPtKEnsOJ5evFK/f/kxy9NvyB0o/nEvufyX56nSxte2Djffw3lUcB8393PNicvDI1pvQf/ydPHaweK+mh5bVVj2ZhY7lULxsnSZiwB/GT78Xgai2v/5JNjdnYXn8UHLuz/KH/lcP0JWrs5/74lRy38vJiZ+Lry9cSq5eW81x0NzPqV+LAaMPvDq7IuH7hm66aBlNK81Cxx8Ky6JoeogBUSAObXid+BCXQ58V0UIzQBW+rs7i6lZ1nLb9cEa474PkqfeSS/8auqmjZbXZErPQsdCd9+emqU+AeJ3BmJypcQaFnQhdn+N07efkL8VlLP8aummjZTStNAsdA+0cVjJNxKB+z4utum9WvU40zl5Int9Inn6/OGtaJnSrOE71vmbouNx9+I3if3NDN220jKaVZqFjCWOnfE0TMWjeO6vum1WvV2E5/Vvy4GvJpyeXC90qjlN/X52hU4WW0bSSoVN3OCr114kSl5aPvJl8+d3w0K3iOF378dJVlc7Qeek6XUMCBP5OuNH7xNvJ3ft3JnToOk7bfnwYobrOS1cfRkwXMWheUrIxLIT/GdvCwgTqu/YV99mGhG4Vx2nux+Elaup8GOHwkukiBvUHBNVWRactQAz9YAgI7xsSuuYx2IYep7kfBwyrqXN4iQOGJe0WnQOGnQImabegZa1TwOCkfkljR8M6J/XDZZokjR0Nm7tMkwtvShoz2rVw4U24lLqksaJdC5dShx+OI2mMBn04Dph6w1MLp4RJGgNaRbNoV4v20IHTPz/AWtIYLPUB1hVGFvNx/5K0rmhUbRZEm/mhAzugll7GSlonNIk2LYgcFocOnBJy/esDCknrgBbRpDmXq3X9Qgdu8vFEg8e3jrOTdDPQHhpEizoePLTpHzrw2JaCMiCPgzldTNKNQGtoDu2hQS1DSOYZFroKo46ZYsF8Mk4f+QVYFoVfhuJ6P0/SMmgHDaElNIW20BhaQ3MaMx76Wi50dawQwHIo3BBkoTtOKVnCuL5emJubm1ufjXbQEFpCU2hLbRWSZW0/dJK05gydpF0u+Q9+ZPG28v5k2AAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NGetText.Target>
+                              <uix:NGetText.Text>
+                                <OutArgument x:TypeArguments="x:String">[strCadastroInativo]</OutArgument>
+                              </uix:NGetText.Text>
+                            </uix:NGetText>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,101" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[&quot;A instalação: &quot;+strNumInstalacao+&quot; está com o cadastro inativo&quot;]" />
+                            <uix:NClick ClickType="Single" DisplayName="Click 'Entendi'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c0c0a1f0-2e60-4396-a0df-8d733807a8dc" Version="V1">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/selecionar-cnpj-corp" DesignTimeRectangle="813, 640, 310, 40" ElementType="Button" FriendlyName="'Entendi'" FullSelectorArgument="&lt;webctrl parentid='dialogContent_88' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='dialogContent_88' tag='BUTTON' type='button' class='text-color-btn md-button md-ink-ripple' aaname='Entendi' check:innerText='ENTENDI' /&gt;" Guid="f5ee2df8-288b-4555-9e1e-20e2b562f795" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAToAAAAsCAYAAAD1unRuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAS+SURBVHhe7d2/ixxlAIdx/wMRrASxEUGxE60UCwv9G8RKEmw0GEUtNIJKINorSCo9OwWDiAQsI4EYi4ggRo1gkWhAosEYDCH31YeZYecmM7sze3vJzs3zgSHc7d7MFceT+fG+794SSdrlDJ2kXW/7oTv+Y/LO58mT7yYPHUjufC65bW9y6x43Nze3YRvtoCG0hKbQFhqzTcuF7sz55PVPkntfSh59KznwcXLkm+T7s8nFy8m1zfKNkjQA7aAhtISm0BYaQ2toDu1ZwrDQnb+YvPBRcsezxS/ALyNJO43W0BzaQ4No0QD9Q/fhseKUkoNRXEm60WgPDaJFNKmnfqGjoJw+fn2m/IYk3US0iCbRph4Wh44bgnsPe99N0nqhSbSJRi0wP3TsYP9G+YUkrSEatSB23aHjlJBaStK6o1VzLmPbQ8dNPq5/vVyVNAa0imZ1PKC4PnQ8tuWJhg8eJI0JzaJdLUNPrg8dp388vpWksaFdLZewW0PHqGMG5DlOTtIY0S4a1phBsTV0TLHwbE7SmNEwWlazNXTMJ3Nal6Qxo2G0rGYWOlYI4KmFpmfjWPtKEnsOJ5evFK/f/kxy9NvyB0o/nEvufyX56nSxte2Djffw3lUcB8393PNicvDI1pvQf/ydPHaweK+mh5bVVj2ZhY7lULxsnSZiwB/GT78Xgai2v/5JNjdnYXn8UHLuz/KH/lcP0JWrs5/74lRy38vJiZ+Lry9cSq5eW81x0NzPqV+LAaMPvDq7IuH7hm66aBlNK81Cxx8Ky6JoeogBUSAObXid+BCXQ58V0UIzQBW+rs7i6lZ1nLb9cEa474PkqfeSS/8auqmjZbXZErPQsdCd9+emqU+AeJ3BmJypcQaFnQhdn+N07efkL8VlLP8aummjZTStNAsdA+0cVjJNxKB+z4utum9WvU40zl5Int9Inn6/OGtaJnSrOE71vmbouNx9+I3if3NDN220jKaVZqFjCWOnfE0TMWjeO6vum1WvV2E5/Vvy4GvJpyeXC90qjlN/X52hU4WW0bSSoVN3OCr114kSl5aPvJl8+d3w0K3iOF378dJVlc7Qeek6XUMCBP5OuNH7xNvJ3ft3JnToOk7bfnwYobrOS1cfRkwXMWheUrIxLIT/GdvCwgTqu/YV99mGhG4Vx2nux+Elaup8GOHwkukiBvUHBNVWRactQAz9YAgI7xsSuuYx2IYep7kfBwyrqXN4iQOGJe0WnQOGnQImabegZa1TwOCkfkljR8M6J/XDZZokjR0Nm7tMkwtvShoz2rVw4U24lLqksaJdC5dShx+OI2mMBn04Dph6w1MLp4RJGgNaRbNoV4v20IHTPz/AWtIYLPUB1hVGFvNx/5K0rmhUbRZEm/mhAzugll7GSlonNIk2LYgcFocOnBJy/esDCknrgBbRpDmXq3X9Qgdu8vFEg8e3jrOTdDPQHhpEizoePLTpHzrw2JaCMiCPgzldTNKNQGtoDu2hQS1DSOYZFroKo46ZYsF8Mk4f+QVYFoVfhuJ6P0/SMmgHDaElNIW20BhaQ3MaMx76Wi50dawQwHIo3BBkoTtOKVnCuL5emJubm1ufjXbQEFpCU2hLbRWSZW0/dJK05gydpF0u+Q9+ZPG28v5k2AAAAABJRU5ErkJggg==" InformativeScreenshot="5dd75faa0c5c12137221e2783b6da607.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="939, 651, 57, 17" ElementType="Text" FriendlyName="'Entendi'" FullSelectorArgument="&lt;webctrl aaname='Entendi' parentid='dialogContent_88' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Entendi' parentid='dialogContent_88' tag='SPAN' type='' class='' check:innerText='ENTENDI' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD0AAAAVCAYAAAD1neayAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG9SURBVFhH7VY9SwNBFPQf2NjbiIXYiZ1iYaG/QawkYBcUQQttVALxByiIleYHGCxEsNRGYxERxOAHWCQqSDQYgyEkY4a9JevmgrfHptobeByX927mzd2+3fTAQUSmXUFk2hX8NZ06A3pj7RHbAypVke+bB06uvQc83BWA4RXgPCfCj4PBGtba0CF0nsElIJEG3koiT7x/AZMJUeuh3fTEJnD/KoplfH4DjUZLZCoJFD68h5pQm6nWWs8dZ4GhZeDiQdwXy0CtbkeH0Hmyz8DMNjCyCtzmRQ1//9c0C1joB+bZCIWSR8IAoTcjwXv5dVXY0vHj4UqJ7wOzO0D5x5Jp5g+aV35BvlmiG6aD6HTiyTyJpc5rINPqjDDknMk8CfJFYCEFzO2KtxnGtA0dWaeb5kiMrQPpq4Cm9VmTcybzUiT3AoyuAYeZcKZt6Kh1KoxN+5FIqHk2yOU3vgGc3pibtqHTicd4eQdthihVxG45vQUMLHbHNNFJx48n1EamLzsGj5q6d5ToIpePQH9czKWJaRs6Ok/oI0vdXGTIBvya4XHCY4V1JqZ1DYapjs4T6s+JI4hMu4LItCtw0DTwC66zytXi+lEZAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NClick ClickType="Single" DisplayName="Click 'Sair'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c0c0a1f0-2e60-4396-a0df-8d733807a8dc" Version="V1">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/selecionar-cnpj-corp" DesignTimeRectangle="1891, 149, 21, 14" ElementType="Text" FriendlyName="'Sair'" FullSelectorArgument="&lt;webctrl aaname='Sair' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Sair' tag='SPAN' type='' class='hide-sm hide-xs' check:innerText='Sair' /&gt;" Guid="72ba3262-f803-49d3-a2d7-4f49a1d8ff54" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABkAAAASCAYAAACuLnWgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFpSURBVEhL7ZK/a8JQEMf71z4CWYJkaShmCEIWLWR5CCFUSjNYhw7NkkAtRZB0yBKwhZIloB0sQoYuAfl6L4kRiwoKdfILIbx7d/e5H+8KZ9AFcpTODFlmiB8MKDIDYwzytQXv67e63KOIF748qs57VEOywCgCNMdH+O7DviGYZGK4qBx2aZGQb4jkkA+phsSO6ECF+5mXhp+PTYIshttSIFMRTJKh34WYL8m+1UkELu7bHLZK/6aHmTCTNuOauFAlAaJRNXSYjocwFePKEd9rUFs2ngIffr8DhXzMl2w3hGngQYgwnlFkqa3F59T+aMBhNquqmYLehC6mHoxqV/XXpcy7INaoTr5WBZljeKtStR7S0oB8bBUJ9OcZoi4FKxb8ZI7s24d5CCLsf1R3kg60IqBc/AiPbaU4W2Mal9iXZMB929hPghRPeGBCXT/hhgH+mpatT4foiGWKpfd7sE6G/KMukKN0BgiwArqbcfdE065eAAAAAElFTkSuQmCC" InformativeScreenshot="e5ba9762a0265f08fc5258c2ed59dd0a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="1868, 146, 20, 20" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='I' type='' class='aes-icon aes-sair' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE0SURBVEhL7ZSxa4NAFIf710ohFCQIhQ526NIpw1GQgAhS6OLSxaVDAqEdroPLDS0EFyFCcHK4JSC/PuNRam3Ow8QOpR888Q7f+8477p1hZH5PINcxmOvAuewJlyFeS5XVjxK8IbRneNqWKMue2C7BpiFlmKEECTzLo6cJOWLX9Nt/wR6JYlOq9y7HCyoa3zhgL4WaaDNAsEP+ntG6vyBTRAckAwQH2GV4JMlskauJBr1AZhCvHNw0VhFuL+yWRC/YPOMh8OEbB8P1xIIdCNrIhtNtEZ1KElArmSet8xkgKLC8i5Cq0Z6qBJ9T8aBdvGaAoHsPEip+dS86xWuOF9A94Kv0x+I1J/gDPX9GIOCfe+BVM9JSCYRTnzLMUAJa14LBoUtiWT0xoZ7zrR3o+BSMxcgC4AMp+3PEDbW/gQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="338,188" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]w[u(ctrl)][u(hk)]" Version="V1" />
+                            <Assign sap:VirtualizedContainerService.HintSize="338,71" sap2010:WorkflowViewState.IdRef="Assign_2">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[strOutError]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">Cadastro inativo</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </uix:NCheckState.IfExists>
+                        <uix:NCheckState.IfNotExists>
+                          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,114" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </uix:NCheckState.IfNotExists>
+                        <uix:NCheckState.Target>
+                          <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/selecionar-cnpj-corp" DesignTimeRectangle="718, 586, 500, 19" ElementType="Text" FriendlyName="'Seu cadastro'" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='dialogContent_30' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' parentid='dialogContent_30' tag='SPAN' type='' class='' aaname='Seu cadastro está inativo. Necessário Solicitar Acesso novamente.' check:innerText='Seu cadastro está inativo. Necessário Solicitar Acesso novamente.' /&gt;" Guid="3b28fbb1-9fa0-4083-9384-785bfc500b58" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAfgAAAAXCAYAAADnTV2cAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA6uSURBVHhe7dwFjyRHEgXg+7VmZma2ZZJJJplJtsyWzCAzM8nMzEx1+mr79eXkVXfX9Mzuekf5pNJ0Z2VlRka8iEionv90DQ0NDQ0NDRsOLcE3NDQ0NDRsQLQE39DQ0NDQsAHREnxDQ0NDQ8MGREvwDQ0NDQ0NGxAtwTc0NDQ0NGxArEjwv//+e3f77bd3++yzT7fddtt1O+20U3fOOed0X3311aTGtonzzz+/O/HEE7tff/11UrI2PP/88921117b/fzzz5OSfx+++OKL7oorrujee++9SclKfP/9993hhx/enXXWWb3dh/DOO+90u+++e3frrbdOStYH9EZ/9FiCnQ444IDu22+/nZRsPuhDX3vvvXf34YcfTko3AU/wZT05s6Vxzz33dLvttlv38ssvT0pmg33Zmb3XAnqkM3FD/Nhvv/26Rx55pPv7778nNcah9NdlOFjzaBbfNgceffTRbvvtt++uu+66SUnDRsGW5NF6YZrg//zzz+7iiy/unfPyyy/vnnjiie7OO+/s9t133/766KOPJjW3Pax3ghdstlQiWhYJjM8888yk5H/4559/ultuuaU75JBDui+//HJS+v/46aefuqeffnrdbZ/kWgftt956q3eeWROO9URkkIjOOOOMFX1u6wne5O7ggw/ubrvttt7Wi8C+7Mzey4Lt9txzz37SeP/993ePPfZYd+6553Y77LBDd9VVV42SIyj9dRkO1jyaxbf1xh9//NGddtppPacOPfTQ7rvvvpvcadgI2FI8Wk9MEzwHspoxQymd8YMPPugdd1uekbYEvxJWVFbwWyt5/RscJTIceOCBfRJ6+OGHJ3e2/QRPZvZd7cp5LbAosPP36aefTko2TSQvu+yyfoHw+eefT0oXY739dUvxLbHy7LPP7nbdddd+Nd+wcbAhEny9ZZtkUG5Hv/HGG91xxx3XB0bXqaee2n3yySeTu8MOukg5goHtRCsAW1x2EsyGy3atTKy23FNHXc9kQuKvlYOtQbNoznbXXXd155133gp53n333RXyn3DCCSu2ab/++uu+n9znsORP0tR2eUmiGZ8J0umnn97LRw9g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" InformativeScreenshot="770925f19c1417cfd0af976dce1fe5f7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="813, 640, 310, 40" ElementType="Button" FriendlyName="'Entendi'" FullSelectorArgument="&lt;webctrl parentid='dialogContent_30' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='dialogContent_30' tag='BUTTON' type='button' class='text-color-btn md-button md-ink-ripple' aaname='Entendi' check:innerText='ENTENDI' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAToAAAAsCAYAAAD1unRuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAS+SURBVHhe7d2/ixxlAIdx/wMRrASxEUGxE60UCwv9G8RKEmw0GEUtNIJKINorSCo9OwWDiAQsI4EYi4ggRo1gkWhAosEYDCH31YeZYecmM7sze3vJzs3zgSHc7d7MFceT+fG+794SSdrlDJ2kXW/7oTv+Y/LO58mT7yYPHUjufC65bW9y6x43Nze3YRvtoCG0hKbQFhqzTcuF7sz55PVPkntfSh59KznwcXLkm+T7s8nFy8m1zfKNkjQA7aAhtISm0BYaQ2toDu1ZwrDQnb+YvPBRcsezxS/ALyNJO43W0BzaQ4No0QD9Q/fhseKUkoNRXEm60WgPDaJFNKmnfqGjoJw+fn2m/IYk3US0iCbRph4Wh44bgnsPe99N0nqhSbSJRi0wP3TsYP9G+YUkrSEatSB23aHjlJBaStK6o1VzLmPbQ8dNPq5/vVyVNAa0imZ1PKC4PnQ8tuWJhg8eJI0JzaJdLUNPrg8dp388vpWksaFdLZewW0PHqGMG5DlOTtIY0S4a1phBsTV0TLHwbE7SmNEwWlazNXTMJ3Nal6Qxo2G0rGYWOlYI4KmFpmfjWPtKEnsOJ5evFK/f/kxy9NvyB0o/nEvufyX56nSxte2Djffw3lUcB8393PNicvDI1pvQf/ydPHaweK+mh5bVVj2ZhY7lULxsnSZiwB/GT78Xgai2v/5JNjdnYXn8UHLuz/KH/lcP0JWrs5/74lRy38vJiZ+Lry9cSq5eW81x0NzPqV+LAaMPvDq7IuH7hm66aBlNK81Cxx8Ky6JoeogBUSAObXid+BCXQ58V0UIzQBW+rs7i6lZ1nLb9cEa474PkqfeSS/8auqmjZbXZErPQsdCd9+emqU+AeJ3BmJypcQaFnQhdn+N07efkL8VlLP8aummjZTStNAsdA+0cVjJNxKB+z4utum9WvU40zl5Int9Inn6/OGtaJnSrOE71vmbouNx9+I3if3NDN220jKaVZqFjCWOnfE0TMWjeO6vum1WvV2E5/Vvy4GvJpyeXC90qjlN/X52hU4WW0bSSoVN3OCr114kSl5aPvJl8+d3w0K3iOF378dJVlc7Qeek6XUMCBP5OuNH7xNvJ3ft3JnToOk7bfnwYobrOS1cfRkwXMWheUrIxLIT/GdvCwgTqu/YV99mGhG4Vx2nux+Elaup8GOHwkukiBvUHBNVWRactQAz9YAgI7xsSuuYx2IYep7kfBwyrqXN4iQOGJe0WnQOGnQImabegZa1TwOCkfkljR8M6J/XDZZokjR0Nm7tMkwtvShoz2rVw4U24lLqksaJdC5dShx+OI2mMBn04Dph6w1MLp4RJGgNaRbNoV4v20IHTPz/AWtIYLPUB1hVGFvNx/5K0rmhUbRZEm/mhAzugll7GSlonNIk2LYgcFocOnBJy/esDCknrgBbRpDmXq3X9Qgdu8vFEg8e3jrOTdDPQHhpEizoePLTpHzrw2JaCMiCPgzldTNKNQGtoDu2hQS1DSOYZFroKo46ZYsF8Mk4f+QVYFoVfhuJ6P0/SMmgHDaElNIW20BhaQ3MaMx76Wi50dawQwHIo3BBkoTtOKVnCuL5emJubm1ufjXbQEFpCU2hLbRWSZW0/dJK05gydpF0u+Q9+ZPG28v5k2AAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NCheckState.Target>
+                      </uix:NCheckState>
+                    </Sequence>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/home" DesignTimeRectangle="101, 703, 131, 16" ElementType="Text" FriendlyName="'Minha Conta'" FullSelectorArgument="&lt;webctrl parentid='menu' parentname='Minha Conta' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='menu' parentname='Minha Conta' tag='SPAN' type='' class='flex' aaname='Minha Conta' check:innerText='Minha Conta' /&gt;" Guid="2d394851-8877-4e24-99f3-aa9b4a731372" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIcAAAAUCAYAAACnFS7nAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMESURBVGhD7ZdZaxRBFEb9db76EwTxXRARUVEEcfBBH0RccEEhRuOWaFBjXBLFPZJEjZEYNTExmzG7iVn9rOOlmJ6ZrpkBfetq+Kieqlu3au49fat7ndbnFBWVpghHVFARjqigIhxRQUU4ooLKw7G9VhqfleZ+SbkbhYZnW6WlFenreN6uva/QpljV2lXSzktSz4i0uqa/18KS9PKTtOV8un21OtgoTS9INU/Sx6NS4PjtEvDwfaHhuwFLDHAk+8vpf8BxoMElcF4a+CHtuyZtOCSde2RJ/TwmbTqZPq8aRTgqqhQONDadfzKpIlMuQZM/83DQ+qRzj2ZcoAFrbMYF/mbe3/CUVSPGBiekXXU27/or6+daXJYedFnyGfN69tHWBoxkf+1TqXtI2n1Z2nvV4FlzCyDWYH3s7nTa/G+Ttj5Vp+G19Scv9nnivlUofGDLHO8noyqFo+2LJa3uufVTRUYdLEMuWCE4sD92zxKFDyqN9wdUh29L++stUczDDmhIlK8GwHW6xXx6efCSfUltPmVJBA6On20XpL7v0ojzDdxAQLIBb+NxqaPf9gOgxZWjpVvqd2vhA789w1Kvg6V4zQypFI6mNy4oo6atNQYGgCQTRZuEo9MF3fuhnz7vz9sh7LyPWx1WMfy1slpa4rH19mk62mxgJucB2KzrowWOiTlpx0Ubww4gAKMYDoABMqqGv8qtnQGVwkFAqRoE/fEHF0D3tHO0JBNFm4QjCUA5OPzYniv2BPO0UjlC53/oWCHxXYNSY3tlONgDe2GsHBytbi+ARFXjt9+r95tBpcNBSaZizC/aEcE4gfLBovVJT94jH9RycHDEkBjgoNzz9bGcUjkqvZDyzlHpWAnBAfAcZfVtNgaIHo4jTWbn/29GlQ4Hv5vfWtnnM5bfBMoHi/Zf4OD+rvPPUcI7AUdYcQXwAiTG/acse8KPf2Gu9EIaggPQXvSaX2zOuEoDVBwrQMM+/V4zqjwcUVFFinBEBRXhiAoqwhEVVIQjKqgIR1RQEY6ogHL6A8KnpsaL9VEaAAAAAElFTkSuQmCC" InformativeScreenshot="38ff15d92ca9f6ed0831f61f5c2c9dd1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="8, 684, 230, 55" ElementType="Button" FriendlyName="'Minha Conta'" FullSelectorArgument="&lt;webctrl name='Minha Conta' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl name='Minha Conta' tag='BUTTON' type='button' class='md-button md-ink-ripple' aaname=' Minha Conta' check:innerText='Minha Conta' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NCheckState.Target>
+                </uix:NCheckState>
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="1912, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ/SURBVDhPjZBLTxNhFIZPZ6bT6ZRpEBWNRlCJyk0Eb4AVEC8oWAW5CUbdoCs3LDTuNGJcuJOFJshCQmIiuDDxL5jQpSZEE9BoRDCFUmihA70wPb5tp1o1MZ7kyfmS+d7nnG8oXcFDMi0dlqXgQdkVqLAOLO6zTizslUILpZK+UCJ99hdLw/4i8ZS/UJSBmUItV9pouQpU27KXKuV7EHkD+60cKLfyYpnECDPC7C8ChaJ/fo/YP79b3AwIZwiqET5iy0Z/BpGBLTh4QJ7CFsOLZdbbENyEYBDTP0EQR4gRfj2/S9wCiPR6VQi5bHcgMSAxsMUInlGKLQSICJMJAgvCBQgPIBTxFYg8t0N4MrtNsJFeq1SGapTp0FGFIXoJSQ5ktOSSzUemKjENAtW3U3g8ly8wwgHvVksz6ceUR4D1OmUmVKtUQEh6nc2M/V6+XLCR8mY30bg3l9i7nl7Rygn725XjCq/UK6OQSJAlL4+NjSUoBtdAz088np4PvdffTF5y88Tllu+0etLuAwxRHzpBlCm4AfgvPJ70OUirDRA02Dl8Wu0LN9gp0qhmCq6Cb2DqD76a/T2Fz6jvwo0qR5rUkYjbIUXOOjIFGtj+D/Io0uToR4ijbsdM9JyjHFDMlPxXIVAVPe+YjjZncawla3StTcuJtWpkgMzibmcCAUjmOfUBGwgI3o1dyDLWWjXDaNdeGB1aSbzTKYB00AI2gCpQAhSQkiCUIBuTh9baIejQ2OjUpuIXnUPxLuctXOoFD8BT8BBcAfnAFHRA0JZkHabfh8CLyQwBcxfoThIGk+A5cINfG6QLQYJAQq9BeBDTP+KCDlbBF5DYoBok/0GqiH4AfValWAHcr0gAAAAASUVORK5CYII=" InformativeScreenshot="efe9a190c6982a20c503afe6a901f977.png" Selector="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" Url="https://portalhome.eneldistribuicaosp.com.br/#/trocar-instalacao" />
+          </uix:NApplicationCard.TargetApp>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </uix:NApplicationCard>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="406,402" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="400,333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,101" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error" Message="[&quot;Houve erro ao navegar menu: &quot;+exception.Message]" />
+              <Assign sap:VirtualizedContainerService.HintSize="338,70" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[strOutError]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">["Houve erro ao navegar menu do site da Enel para a instalação: " +strNumInstalacao]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>

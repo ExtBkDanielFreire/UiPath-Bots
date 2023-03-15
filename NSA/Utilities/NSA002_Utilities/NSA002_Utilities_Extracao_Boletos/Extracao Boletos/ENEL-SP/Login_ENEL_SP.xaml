@@ -1,0 +1,393 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Login_Fiesta" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="strUsuario" Type="InOutArgument(x:String)" />
+    <x:Property Name="strSenha" Type="InOutArgument(ss:SecureString)" />
+    <x:Property Name="strUrlSite" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1215,2593</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="60">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="43">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>TimeSpan2</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.ServiceNow.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.ServiceNow.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.ServiceNow</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPathTeam.ServiceNow</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Login_Fiesta" sap:VirtualizedContainerService.HintSize="1225,2528" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1183,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Realizando login site Enel SP&quot;]" />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1183,2305" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="920,2078" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:03">
+          <ui:RetryScope.ActivityBody>
+            <ActivityAction>
+              <Sequence sap:VirtualizedContainerService.HintSize="878,1478" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="836,1386" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                  <TryCatch.Try>
+                    <Sequence DisplayName="Ação" sap:VirtualizedContainerService.HintSize="798,1159" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Enel | Agência virtual" sap:VirtualizedContainerService.HintSize="756,1067" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V2" WindowResize="Maximize">
+                        <uix:NApplicationCard.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Fazer Login" sap:VirtualizedContainerService.HintSize="722,851" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="strButtonEnable" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'E-mail'" sap:VirtualizedContainerService.HintSize="680,757" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V1">
+                                <uix:NCheckState.IfExists>
+                                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,541" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:MinimizeWindow Window="{x:Null}" DisplayName="Minimize Window" sap:VirtualizedContainerService.HintSize="208,22" sap2010:WorkflowViewState.IdRef="MinimizeWindow_1" />
+                                    <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="208,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="5" DisplayName="Type Into 'E-mail'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="208,51" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Text="[strUsuario]" Version="V1">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/autenticacao/login" DesignTimeRectangle="805, 380, 316, 30" ElementType="InputBox" FriendlyName="'INPUT email'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' class='ng-pristine ng-untouched md-input ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern' aaname='E-mail' /&gt;" Guid="83594abc-9522-46ad-9091-f79261c52b3b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAUAAAAAiCAYAAAAu2wBPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMDSURBVHhe7ZnbjuMgDED3/78w6jykUualfesXZLmZGENJsrvdacU5ElKpiY0jcYZqfq0AAIOCAAFgWBAgAAwLAgSAYUGAADAsCBAAhgUBAsCwIEAAGBYECADDggABYFgQIAAMCwIEgGH5IAE+1uVrWqfJjPme4j/FfZ3dPuab/QwA785nCPA2B9ldvh/pC2GT4ntIBwECfBKVAB/fF3erWorblhVPWJNi0zS7Yy94AVzW5basF4l/LU5TUQxxvYsX6XTMDXujC/LTNWrifo7njT3e1/u8xb20ir6KfdS3z+2daOnpzy16vZoaOvbw79O9g/SHIMfD9/JM/x0BQE1bgO5A5UMcDt0mlxjfDls5Twc8SE/N1fNBOvlwW2FECZRyUWLTB97X8HsLtZI8Dua1PWbxyfOhjtS1uWW9xHUtW1dje9NzW8PMpW87z+/d5gaAI7QFmAXm2Tvg+vDV8VJ4jiytVEvHPOFwp4Pt15pDn3PLbSjF9b738lY9hpgSbeqpLTJHsf6gAMN+tz8cBa2YrvFkf1p4zZ4BoMs5AVYHMeIl1xNgcTNRAtQ/QcsRZeDjMVfrhmNqncjbFqAWUFuAZd5zAqzf60Y75nP1BajrIECA8/y8ADuH1sc3sdi65XdaAHt5qx53BBjyeenJM8V70D3X/QttyUXaMdUfAgR4Cf/lJ/AzAfak4MkCbIlX5bF19/JW8a4AlYiEPxBg2G9RQ9GK6RoIEOAlnBRgiqvDWs5rAfQEKOt1XNf3n2NMS9ZPvRDklhdj5eHfz3tOgLqnOP/7f4K41fmmanswcwQI8BJOC9AT1gQJ+KHFUa/tC9AhMpNhY3ku4olr7moPRX6hk/ecAB3hhia5vIjiXmJd3XPZ/7N32dqT1MwxLTMECPASKgG+G9stqU+UspYYAECftxegvhnpG89GulUVtykAgH0+QICC+fmYh/5pCABwnA8SIADAvwUBAsCwIEAAGBYECADDggABYFgQIAAMSxbg9XplMBiMIYbADRAAhgUBAsCgrOtvwAkqsaxMi0MAAAAASUVORK5CYII=" InformativeScreenshot="df882869478186e5dd864b54865a7918.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="805, 363, 41, 17" ElementType="Text" FriendlyName="'E-mail'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='E-mail' check:innerText='E-mail' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAAVCAYAAADSM2daAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGESURBVEhL7ZS/a4NAHMX710rgCEgRQjNoQQKhS+EWCYSCS5cKSSFOhdot0MFFKIUSKEItJZNDlkB4Pe/OqDX9obRSwRe+EHPf+75P9HlHaKE66KbUQTelPbQ/UaAoh8qCL3sakW8JX91FxD6unjAYcF/lOlMJWjUpphfTXHkIZU8jevaE7yxA/FNoYxHJX/6D/gzahyVjNL+l0Aj73iMYOyusn1zQAeFzyYDCe5FbdjECZ4xhX3iSYxP2/VqspfGYJKGsFY85glg2fKoUmlXfALXG0HrymsFrZxaoLsCVkysetdAZ8mtymnhRGBxehf2QjKsBXay0md2ZWfpHcnWXIKTQ2eBoYYj93JhpF8BWkx4T7huw3awRLuew5RxrpPJ+/pTrQB+OR7r5Q/HBWTwk4t44m1U03y5pNiNXvwz9lapDCy8Nl49bvhrfmFl/HejykfddrqtD7zOtMy9qgMh3oDZ0uYobyqoOjc0K7rnGe/ipcp3rrwLdJnXQTamDbkothAbeARBqhVkdOPyDAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NTypeInto.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NTypeInto>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'I' - Inserir senha" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="208,51" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" SecureText="[strSenha]" Version="V1">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/autenticacao/login" DesignTimeRectangle="805, 451, 316, 30" ElementType="InputBoxPassword" FriendlyName="'INPUT senha'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required' aaname='Senha' /&gt;" Guid="0586cb48-b0ba-45e7-b11d-7e5415790b26" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAUAAAAAiCAYAAAAu2wBPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQqSURBVHhe7ZtdTuswEEbv/p/ZACtgBWyADVCVhyC1L/AGG8jN52Sa8U+Spk1KIedIlhp77Ewq+TBuy78aAGCjIEAA2CwIEAB+hNfX1/r5+Tm0p6en0F5eXurj8dhFrA8CBICbIsk9Pj7WDw8PoUl8urZmfRLk9/d3N2sdECAA3ARVdiY4VX1DglO/F+GaEkSAALA6qvqs4vNHXL2W8Ozo62XnhamYNUCAALAqquKsmjMkOutPm2Ro+DjfvxQIEABWQ0ddySut4LzUrOpTxTckO1tnaQkiQABYBcmqJC3rHzrW2nj62d/QeteAAAFgcVTNSVaq3FJU5emzvTE0XhKdVYipHC8FAQLA4oxJbkhunqn5Gl8CBAgAi2OSKlVq6i9Vhp6hGK2nCnBIjnPJBfhR1bvdLm9vh/qrCxFfx33WN0QUq/XPnPdX+aya97P67K4A/h5jn9fZFxpDx1iT3NgRWEfsJSgLsCCosGmXEBcCRICwCYYkKMHZMXioQixVeCbOJX8TeLYAmzquPrzt6v2xHckqQF85Nv0Ht8lPsT5mV9UnBUT9u7r66PpLfB3qvYu1fEQmlhC7rw8Wkszd+bECYb1TrMs38FlXfi133/C8VfMeNO+Xjed5VtH86Jln5glwrwxJ0PrtmKuKTn0SX6nCM/ml61zLDAHaxk6kFi7aDXvaxCa0Umy6foh1ckmlFdFKp5dFfD0qwDTHJoMgqLFndWPxdZpH4Y+DHw/P2D9TK9b+uo3v3oOZeQLcO16CvuLTtURnR141VX+p/OzYW/pM8FpmCdCPeSGE1148tmknBdjG9Zu9JV/PSMUTM1kBJkR5JUyOpfmFe7USy+fOEHWBsVwAfgMmQVV4qeBMgOnRVnFWEd7uX+EuEKA2tD/iCb/Jow0crd+KoT/quVYUYLfWQMx5YknuOfSsUVy8RriPX+PUlhTguXkC/A4kMROar/RMgHatOKv6SsJckkWOwNcKcKiiG0XrdHKwe4+LpRdKdFSdFEtXzYa5reCy+yRcJ8BL8wT4HegoayK0Y7FJ0frV1qr6PIt8CRJeR0KYdwRO5TkHv/aoWArPNU8svcSm5uXjMwR4dZ4AvwMJTtWdBCj5qUmOtxCfcbYAw6Z1/dGmDBvYVXJaQ1XMpAAbQqw//o1JMRZJGhvu475QCTl7sbixU46FZxWZdKL5bR4+Rx+fzU3ynhTgjDwB4HLKAtSGS5vfsA1lQXSxTb9+BlOqFk0G+beg3dymjVaEaX5RXl3l2Y1VH7pXf59WiF1TPmEtL19PvFYW10k/Ws+GrhFgw7w8AeBScgEuhDbxqMgAAH6YRQSYVTxJRQMAcI8sVAFOHBcBAO6Q1Y7AAAD3DgIEgM2CAAFgsyBAANgsCBAANgsCBIDNchLg+/s7jUajbaIZVIAAsFkQIABslLr+Dzk8mpVxsNIRAAAAAElFTkSuQmCC" InformativeScreenshot="9211d342902654a2faa0eac9591fe21e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="805, 434, 40, 17" ElementType="Text" FriendlyName="'Senha'" FullSelectorArgument="&lt;webctrl aaname='Senha' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Senha' tag='LABEL' type='' class='' check:innerText='Senha' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAVCAYAAAA98QxkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJGSURBVEhL7ZXNa9tAEMX71wrDEhBGECKKZVgKJocWFoMIiFBTqot9cCHKwYamB0OQD4YgcApBUAxRDi4BHQTBEF72SyuZJj3Y8cHgBwvWzO7op9Eb+QP2TAfgXesAvGvVgAukFwzukQXL4uvIRed7jOWzTm+lDFFL1PUQPejQhjLA2SXVoB7YOYOnwe3zBCu9Z3O9O3BZ0MXwXkVQTMAaIsYwedKxjfXuwEtEVHe0O0L69/We5jd9dI6J3GcRG/RraZkZfBGzfAx/MjhE/CZw2BUyma+Aw3Fo3h5ph0gKked6zpEMOsaSpEnRmy51spKxRP7rM4i8qV4C6GyE21xvmPdgi7i0TADWVuDKMiWwOKctJaEtuIMFP1wC89Vw0PEry1ndWFpuMXDlNWkzBMaSNnpzeXej2tBx6D8ThKcuiLSCXs0ACbfE7EwVoN2AFxSLgdoiJixTArvop7rYXQhHxFoRxy2BOUCi848jUJFv8Pr8clUssbgeoidrB/A/2fL+3kWm9msp4KcMyTRGnGR6wFbI531QDR7c1Dr0zxK+rCwxk+e5HiJ4IrYGXPfw+pnVNdP11tcbwLEeMIrRo4xwZRh+FDH1WlSHax3kD5Ul/CGnCTLT4c2BVX0H4W/VsnysvlqvA3PdflOvwCLCY341XCd9pGJw7iPV8QaBxyoPW1QAbQ9sPNziHmaeseWbwPKPY+yDNmtfAT50aTnFXMVdBHai8wLc5LcHRpEi+uLI2uSY4eqHL3//B3g/dADetQ7Au9aeAQMvNaQgLCXvmqoAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NTypeInto.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NTypeInto>
+                                    <uix:NGetAttribute Attribute="aastate" DisplayName="Get Attribute 'Entrar'" sap:VirtualizedContainerService.HintSize="208,51" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V1">
+                                      <uix:NGetAttribute.Result>
+                                        <OutArgument x:TypeArguments="x:String">[strButtonEnable]</OutArgument>
+                                      </uix:NGetAttribute.Result>
+                                      <uix:NGetAttribute.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/autenticacao/login" DesignTimeRectangle="828, 526, 270, 40" ElementType="Button" FriendlyName="'Entrar'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='aes-button submit stretch md-button md-ink-ripple' aaname='Entrar' check:innerText='ENTRAR' /&gt;" Guid="67dd2e53-326c-46ea-9c39-2e935c1d74fc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARIAAAAsCAYAAACpMDdKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARCSURBVHhe7ZzpbtNQFAZ5/5dDIBaxCihQtlJaoJSlXDyNj3zjnDhOwg+7mU8a0djXC6JnuIudW8UYY/aMIjHG7J39RfLtspTjL6U8/1DKwzel3H1Vyu0XIjJVqFFqlZqldqnhPbObSC5/l/L2tJT7r/MbFZF5QS1T09T2DtlOJL/+lHJ0kt+IiNwMqHFqfYuMF8mnrw5bRA4Fap2aH5lxIrEXInKYUPsjslkkTMhkFxCRwwAHbMiwSJSIiMAGmawXicMZEakZGObkImGSJTuRiBw2ayZgV0XCso+rMyKSgRuSpeFVkTikEZEhkiHOskh4qi07UESkpvcE7LJIeEQ2O0hEpAZXVFkWie/OiMgYcEWVTiS8AZgdINOEtzb//m3/8aqwjX2xny4ob3rGcU/eLSbLfvwq5eXHUq6u2gOTnP/Ir3PVfD6/WD5vcPpt0ebj+eo+rtkP9/L682pbmT7VW8OdSPiFyRrLNIkCP/2+EELwooECrwXwuSnuOK4Wyb2jRXuOO266qgiCX444F22z6/Az284amdT39Pi4lJ/t2PmyOf+Dnmi45rU4ThbnedMIhPZ/GplxH3VbmT78brTpROJTrPMiCnzdMz/sRwy/m8KlUF9+WmyvRVK3p7DpndALqbdn17nzanE8Enj0ttv+/qyTEX8iitgHIRLuIba9a+8z68HItKmedu1EknVTZbqMEQn7EUMUNwL4nyLhPPRCYjvXYBvLg8ir32NZJ5Khv4dMF5zRphOJD6HNiyjwOnxme72fAqWg+Zmi/R8iiZ5HLQqGJrU8kAq9oWfvuzZ9kSAhtjm0mSc4o00nkqyhTJco8HruIuZH6v0I4FoezTCEoQhtdhFJPxc/l3uxJ811OD4eaGR5ENkgnWjDNfuhDYKLNjIv2iiSuZL1FIb2xxCCHsMuIqmF9aXt4SAP2jCpyuRqFoTDUIh20SOpJ1v5XPdSZF60cWgzV7YVCcUck6CwrUjq6zztDY+i98HqUMgGkBbbo5cSIqmlgYw4P6tGsU3mQTq0cbJ1XmQ9hYCVlEwAMY9B9hFJTLbGOTgmm+dAICEYPmciiVUbrhPbZB6kk60u/86LKPAsFH0mALjuATRt9hEJhBQYnjCpWg9hgushTzs3ExOrfZGsO79Mn3T51/8RRGQbcEabTiSMn7PGIiIZOKNNJxLiS3siMoa1L+0Rv0ZARMYw+DUCfrGRiIxh8IuNSKz5i4hk4IheVkXC8pwPp4lIBm7AEb2sioS4pi8iGbghSS4S4hBHRGqSIU1kvUiIT7uKCFRPsWYZFglRJiKHzQaJkM0iIQ5zRA6TgeFMnXEiIUyyuJojchhQ62smVrOMFwlh2cfeicjNhhpPlniHsp1IIjzVxiOyvpsjcjOglqnp3hOrY7ObSOrwBiCvEzMhwxedOPwRmTbUKLVKzVK71Vu8u2Z/kRhjDj6KxBizZ0r5B3r4Yy1HQmzZAAAAAElFTkSuQmCC" InformativeScreenshot="70901424f516fbedecc1eb59893a09f8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="828, 592, 270, 40" ElementType="Button" FriendlyName="'Solicitar acesso'" FullSelectorArgument="&lt;webctrl id='btnSolicitarAcesso' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl id='btnSolicitarAcesso' tag='BUTTON' type='button' class='aes-button-secondary submit stretch md-button md-ink-ripple' aaname='Solicitar acesso' check:innerText='SOLICITAR ACESSO' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NGetAttribute.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NGetAttribute>
+                                    <If Condition="[strButtonEnable = &quot;enabled&quot;]" sap:VirtualizedContainerService.HintSize="208,51" sap2010:WorkflowViewState.IdRef="If_1">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="400,290" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NClick ClickType="Single" DisplayName="Click 'Entrar'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V1">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/autenticacao/login" DesignTimeRectangle="828, 571, 270, 40" ElementType="Button" FriendlyName="'Entrar'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='aes-button submit stretch md-button md-ink-ripple' aaname='Entrar' check:innerText='ENTRAR' /&gt;" Guid="a64cd6c9-6fa6-4c10-993d-d5920030c3ca" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARIAAAAsCAYAAACpMDdKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARCSURBVHhe7ZzpbtNQFAZ5/5dDIBaxCihQtlJaoJSlXDyNj3zjnDhOwg+7mU8a0djXC6JnuIudW8UYY/aMIjHG7J39RfLtspTjL6U8/1DKwzel3H1Vyu0XIjJVqFFqlZqldqnhPbObSC5/l/L2tJT7r/MbFZF5QS1T09T2DtlOJL/+lHJ0kt+IiNwMqHFqfYuMF8mnrw5bRA4Fap2aH5lxIrEXInKYUPsjslkkTMhkFxCRwwAHbMiwSJSIiMAGmawXicMZEakZGObkImGSJTuRiBw2ayZgV0XCso+rMyKSgRuSpeFVkTikEZEhkiHOskh4qi07UESkpvcE7LJIeEQ2O0hEpAZXVFkWie/OiMgYcEWVTiS8AZgdINOEtzb//m3/8aqwjX2xny4ob3rGcU/eLSbLfvwq5eXHUq6u2gOTnP/Ir3PVfD6/WD5vcPpt0ebj+eo+rtkP9/L682pbmT7VW8OdSPiFyRrLNIkCP/2+EELwooECrwXwuSnuOK4Wyb2jRXuOO266qgiCX444F22z6/Az284amdT39Pi4lJ/t2PmyOf+Dnmi45rU4ThbnedMIhPZ/GplxH3VbmT78brTpROJTrPMiCnzdMz/sRwy/m8KlUF9+WmyvRVK3p7DpndALqbdn17nzanE8Enj0ttv+/qyTEX8iitgHIRLuIba9a+8z68HItKmedu1EknVTZbqMEQn7EUMUNwL4nyLhPPRCYjvXYBvLg8ir32NZJ5Khv4dMF5zRphOJD6HNiyjwOnxme72fAqWg+Zmi/R8iiZ5HLQqGJrU8kAq9oWfvuzZ9kSAhtjm0mSc4o00nkqyhTJco8HruIuZH6v0I4FoezTCEoQhtdhFJPxc/l3uxJ811OD4eaGR5ENkgnWjDNfuhDYKLNjIv2iiSuZL1FIb2xxCCHsMuIqmF9aXt4SAP2jCpyuRqFoTDUIh20SOpJ1v5XPdSZF60cWgzV7YVCcUck6CwrUjq6zztDY+i98HqUMgGkBbbo5cSIqmlgYw4P6tGsU3mQTq0cbJ1XmQ9hYCVlEwAMY9B9hFJTLbGOTgmm+dAICEYPmciiVUbrhPbZB6kk60u/86LKPAsFH0mALjuATRt9hEJhBQYnjCpWg9hgushTzs3ExOrfZGsO79Mn3T51/8RRGQbcEabTiSMn7PGIiIZOKNNJxLiS3siMoa1L+0Rv0ZARMYw+DUCfrGRiIxh8IuNSKz5i4hk4IheVkXC8pwPp4lIBm7AEb2sioS4pi8iGbghSS4S4hBHRGqSIU1kvUiIT7uKCFRPsWYZFglRJiKHzQaJkM0iIQ5zRA6TgeFMnXEiIUyyuJojchhQ62smVrOMFwlh2cfeicjNhhpPlniHsp1IIjzVxiOyvpsjcjOglqnp3hOrY7ObSOrwBiCvEzMhwxedOPwRmTbUKLVKzVK71Vu8u2Z/kRhjDj6KxBizZ0r5B3r4Yy1HQmzZAAAAAElFTkSuQmCC" InformativeScreenshot="8166fcddf9175b290c1cb7f9508e0c7f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="828, 637, 270, 40" ElementType="Button" FriendlyName="'Solicitar acesso'" FullSelectorArgument="&lt;webctrl id='btnSolicitarAcesso' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl id='btnSolicitarAcesso' tag='BUTTON' type='button' class='aes-button-secondary submit stretch md-button md-ink-ripple' aaname='Solicitar acesso' check:innerText='SOLICITAR ACESSO' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="400,847" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="5" DisplayName="Type Into 'E-mail'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,226" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Text="[strUsuario]" Version="V1">
+                                            <uix:NTypeInto.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/autenticacao/login" DesignTimeRectangle="805, 380, 316, 30" ElementType="InputBox" FriendlyName="'INPUT email'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' class='ng-pristine ng-untouched md-input ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern' aaname='E-mail' /&gt;" Guid="83594abc-9522-46ad-9091-f79261c52b3b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAUAAAAAiCAYAAAAu2wBPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMDSURBVHhe7ZnbjuMgDED3/78w6jykUualfesXZLmZGENJsrvdacU5ElKpiY0jcYZqfq0AAIOCAAFgWBAgAAwLAgSAYUGAADAsCBAAhgUBAsCwIEAAGBYECADDggABYFgQIAAMCwIEgGH5IAE+1uVrWqfJjPme4j/FfZ3dPuab/QwA785nCPA2B9ldvh/pC2GT4ntIBwECfBKVAB/fF3erWorblhVPWJNi0zS7Yy94AVzW5basF4l/LU5TUQxxvYsX6XTMDXujC/LTNWrifo7njT3e1/u8xb20ir6KfdS3z+2daOnpzy16vZoaOvbw79O9g/SHIMfD9/JM/x0BQE1bgO5A5UMcDt0mlxjfDls5Twc8SE/N1fNBOvlwW2FECZRyUWLTB97X8HsLtZI8Dua1PWbxyfOhjtS1uWW9xHUtW1dje9NzW8PMpW87z+/d5gaAI7QFmAXm2Tvg+vDV8VJ4jiytVEvHPOFwp4Pt15pDn3PLbSjF9b738lY9hpgSbeqpLTJHsf6gAMN+tz8cBa2YrvFkf1p4zZ4BoMs5AVYHMeIl1xNgcTNRAtQ/QcsRZeDjMVfrhmNqncjbFqAWUFuAZd5zAqzf60Y75nP1BajrIECA8/y8ADuH1sc3sdi65XdaAHt5qx53BBjyeenJM8V70D3X/QttyUXaMdUfAgR4Cf/lJ/AzAfak4MkCbIlX5bF19/JW8a4AlYiEPxBg2G9RQ9GK6RoIEOAlnBRgiqvDWs5rAfQEKOt1XNf3n2NMS9ZPvRDklhdj5eHfz3tOgLqnOP/7f4K41fmmanswcwQI8BJOC9AT1gQJ+KHFUa/tC9AhMpNhY3ku4olr7moPRX6hk/ecAB3hhia5vIjiXmJd3XPZ/7N32dqT1MwxLTMECPASKgG+G9stqU+UspYYAECftxegvhnpG89GulUVtykAgH0+QICC+fmYh/5pCABwnA8SIADAvwUBAsCwIEAAGBYECADDggABYFgQIAAMSxbg9XplMBiMIYbADRAAhgUBAsCgrOtvwAkqsaxMi0MAAAAASUVORK5CYII=" InformativeScreenshot="df882869478186e5dd864b54865a7918.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="805, 363, 41, 17" ElementType="Text" FriendlyName="'E-mail'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='E-mail' check:innerText='E-mail' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAAVCAYAAADSM2daAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGESURBVEhL7ZS/a4NAHMX710rgCEgRQjNoQQKhS+EWCYSCS5cKSSFOhdot0MFFKIUSKEItJZNDlkB4Pe/OqDX9obRSwRe+EHPf+75P9HlHaKE66KbUQTelPbQ/UaAoh8qCL3sakW8JX91FxD6unjAYcF/lOlMJWjUpphfTXHkIZU8jevaE7yxA/FNoYxHJX/6D/gzahyVjNL+l0Aj73iMYOyusn1zQAeFzyYDCe5FbdjECZ4xhX3iSYxP2/VqspfGYJKGsFY85glg2fKoUmlXfALXG0HrymsFrZxaoLsCVkysetdAZ8mtymnhRGBxehf2QjKsBXay0md2ZWfpHcnWXIKTQ2eBoYYj93JhpF8BWkx4T7huw3awRLuew5RxrpPJ+/pTrQB+OR7r5Q/HBWTwk4t44m1U03y5pNiNXvwz9lapDCy8Nl49bvhrfmFl/HejykfddrqtD7zOtMy9qgMh3oDZ0uYobyqoOjc0K7rnGe/ipcp3rrwLdJnXQTamDbkothAbeARBqhVkdOPyDAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NTypeInto.Target>
+                                          </uix:NTypeInto>
+                                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'I' - Inserir senha" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,251" sap2010:WorkflowViewState.IdRef="NTypeInto_4" IsPassword="True" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" SecureText="[strSenha]" Version="V1">
+                                            <uix:NTypeInto.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/autenticacao/login" DesignTimeRectangle="805, 451, 316, 30" ElementType="InputBoxPassword" FriendlyName="'INPUT senha'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required' aaname='Senha' /&gt;" Guid="0586cb48-b0ba-45e7-b11d-7e5415790b26" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAUAAAAAiCAYAAAAu2wBPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQqSURBVHhe7ZtdTuswEEbv/p/ZACtgBWyADVCVhyC1L/AGG8jN52Sa8U+Spk1KIedIlhp77Ewq+TBuy78aAGCjIEAA2CwIEAB+hNfX1/r5+Tm0p6en0F5eXurj8dhFrA8CBICbIsk9Pj7WDw8PoUl8urZmfRLk9/d3N2sdECAA3ARVdiY4VX1DglO/F+GaEkSAALA6qvqs4vNHXL2W8Ozo62XnhamYNUCAALAqquKsmjMkOutPm2Ro+DjfvxQIEABWQ0ddySut4LzUrOpTxTckO1tnaQkiQABYBcmqJC3rHzrW2nj62d/QeteAAAFgcVTNSVaq3FJU5emzvTE0XhKdVYipHC8FAQLA4oxJbkhunqn5Gl8CBAgAi2OSKlVq6i9Vhp6hGK2nCnBIjnPJBfhR1bvdLm9vh/qrCxFfx33WN0QUq/XPnPdX+aya97P67K4A/h5jn9fZFxpDx1iT3NgRWEfsJSgLsCCosGmXEBcCRICwCYYkKMHZMXioQixVeCbOJX8TeLYAmzquPrzt6v2xHckqQF85Nv0Ht8lPsT5mV9UnBUT9u7r66PpLfB3qvYu1fEQmlhC7rw8Wkszd+bECYb1TrMs38FlXfi133/C8VfMeNO+Xjed5VtH86Jln5glwrwxJ0PrtmKuKTn0SX6nCM/ml61zLDAHaxk6kFi7aDXvaxCa0Umy6foh1ckmlFdFKp5dFfD0qwDTHJoMgqLFndWPxdZpH4Y+DHw/P2D9TK9b+uo3v3oOZeQLcO16CvuLTtURnR141VX+p/OzYW/pM8FpmCdCPeSGE1148tmknBdjG9Zu9JV/PSMUTM1kBJkR5JUyOpfmFe7USy+fOEHWBsVwAfgMmQVV4qeBMgOnRVnFWEd7uX+EuEKA2tD/iCb/Jow0crd+KoT/quVYUYLfWQMx5YknuOfSsUVy8RriPX+PUlhTguXkC/A4kMROar/RMgHatOKv6SsJckkWOwNcKcKiiG0XrdHKwe4+LpRdKdFSdFEtXzYa5reCy+yRcJ8BL8wT4HegoayK0Y7FJ0frV1qr6PIt8CRJeR0KYdwRO5TkHv/aoWArPNU8svcSm5uXjMwR4dZ4AvwMJTtWdBCj5qUmOtxCfcbYAw6Z1/dGmDBvYVXJaQ1XMpAAbQqw//o1JMRZJGhvu475QCTl7sbixU46FZxWZdKL5bR4+Rx+fzU3ynhTgjDwB4HLKAtSGS5vfsA1lQXSxTb9+BlOqFk0G+beg3dymjVaEaX5RXl3l2Y1VH7pXf59WiF1TPmEtL19PvFYW10k/Ws+GrhFgw7w8AeBScgEuhDbxqMgAAH6YRQSYVTxJRQMAcI8sVAFOHBcBAO6Q1Y7AAAD3DgIEgM2CAAFgsyBAANgsCBAANgsCBIDNchLg+/s7jUajbaIZVIAAsFkQIABslLr+Dzk8mpVxsNIRAAAAAElFTkSuQmCC" InformativeScreenshot="9211d342902654a2faa0eac9591fe21e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="805, 434, 40, 17" ElementType="Text" FriendlyName="'Senha'" FullSelectorArgument="&lt;webctrl aaname='Senha' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Senha' tag='LABEL' type='' class='' check:innerText='Senha' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAVCAYAAAA98QxkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJGSURBVEhL7ZXNa9tAEMX71wrDEhBGECKKZVgKJocWFoMIiFBTqot9cCHKwYamB0OQD4YgcApBUAxRDi4BHQTBEF72SyuZJj3Y8cHgBwvWzO7op9Eb+QP2TAfgXesAvGvVgAukFwzukQXL4uvIRed7jOWzTm+lDFFL1PUQPejQhjLA2SXVoB7YOYOnwe3zBCu9Z3O9O3BZ0MXwXkVQTMAaIsYwedKxjfXuwEtEVHe0O0L69/We5jd9dI6J3GcRG/RraZkZfBGzfAx/MjhE/CZw2BUyma+Aw3Fo3h5ph0gKked6zpEMOsaSpEnRmy51spKxRP7rM4i8qV4C6GyE21xvmPdgi7i0TADWVuDKMiWwOKctJaEtuIMFP1wC89Vw0PEry1ndWFpuMXDlNWkzBMaSNnpzeXej2tBx6D8ThKcuiLSCXs0ACbfE7EwVoN2AFxSLgdoiJixTArvop7rYXQhHxFoRxy2BOUCi848jUJFv8Pr8clUssbgeoidrB/A/2fL+3kWm9msp4KcMyTRGnGR6wFbI531QDR7c1Dr0zxK+rCwxk+e5HiJ4IrYGXPfw+pnVNdP11tcbwLEeMIrRo4xwZRh+FDH1WlSHax3kD5Ul/CGnCTLT4c2BVX0H4W/VsnysvlqvA3PdflOvwCLCY341XCd9pGJw7iPV8QaBxyoPW1QAbQ9sPNziHmaeseWbwPKPY+yDNmtfAT50aTnFXMVdBHai8wLc5LcHRpEi+uLI2uSY4eqHL3//B3g/dADetQ7Au9aeAQMvNaQgLCXvmqoAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NTypeInto.Target>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NTypeInto>
+                                          <uix:NClick ClickType="Single" DisplayName="Click 'Entrar'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V1">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/autenticacao/login" DesignTimeRectangle="828, 571, 270, 40" ElementType="Button" FriendlyName="'Entrar'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='aes-button submit stretch md-button md-ink-ripple' aaname='Entrar' check:innerText='ENTRAR' /&gt;" Guid="a64cd6c9-6fa6-4c10-993d-d5920030c3ca" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARIAAAAsCAYAAACpMDdKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARCSURBVHhe7ZzpbtNQFAZ5/5dDIBaxCihQtlJaoJSlXDyNj3zjnDhOwg+7mU8a0djXC6JnuIudW8UYY/aMIjHG7J39RfLtspTjL6U8/1DKwzel3H1Vyu0XIjJVqFFqlZqldqnhPbObSC5/l/L2tJT7r/MbFZF5QS1T09T2DtlOJL/+lHJ0kt+IiNwMqHFqfYuMF8mnrw5bRA4Fap2aH5lxIrEXInKYUPsjslkkTMhkFxCRwwAHbMiwSJSIiMAGmawXicMZEakZGObkImGSJTuRiBw2ayZgV0XCso+rMyKSgRuSpeFVkTikEZEhkiHOskh4qi07UESkpvcE7LJIeEQ2O0hEpAZXVFkWie/OiMgYcEWVTiS8AZgdINOEtzb//m3/8aqwjX2xny4ob3rGcU/eLSbLfvwq5eXHUq6u2gOTnP/Ir3PVfD6/WD5vcPpt0ebj+eo+rtkP9/L682pbmT7VW8OdSPiFyRrLNIkCP/2+EELwooECrwXwuSnuOK4Wyb2jRXuOO266qgiCX444F22z6/Az284amdT39Pi4lJ/t2PmyOf+Dnmi45rU4ThbnedMIhPZ/GplxH3VbmT78brTpROJTrPMiCnzdMz/sRwy/m8KlUF9+WmyvRVK3p7DpndALqbdn17nzanE8Enj0ttv+/qyTEX8iitgHIRLuIba9a+8z68HItKmedu1EknVTZbqMEQn7EUMUNwL4nyLhPPRCYjvXYBvLg8ir32NZJ5Khv4dMF5zRphOJD6HNiyjwOnxme72fAqWg+Zmi/R8iiZ5HLQqGJrU8kAq9oWfvuzZ9kSAhtjm0mSc4o00nkqyhTJco8HruIuZH6v0I4FoezTCEoQhtdhFJPxc/l3uxJ811OD4eaGR5ENkgnWjDNfuhDYKLNjIv2iiSuZL1FIb2xxCCHsMuIqmF9aXt4SAP2jCpyuRqFoTDUIh20SOpJ1v5XPdSZF60cWgzV7YVCcUck6CwrUjq6zztDY+i98HqUMgGkBbbo5cSIqmlgYw4P6tGsU3mQTq0cbJ1XmQ9hYCVlEwAMY9B9hFJTLbGOTgmm+dAICEYPmciiVUbrhPbZB6kk60u/86LKPAsFH0mALjuATRt9hEJhBQYnjCpWg9hgushTzs3ExOrfZGsO79Mn3T51/8RRGQbcEabTiSMn7PGIiIZOKNNJxLiS3siMoa1L+0Rv0ZARMYw+DUCfrGRiIxh8IuNSKz5i4hk4IheVkXC8pwPp4lIBm7AEb2sioS4pi8iGbghSS4S4hBHRGqSIU1kvUiIT7uKCFRPsWYZFglRJiKHzQaJkM0iIQ5zRA6TgeFMnXEiIUyyuJojchhQ62smVrOMFwlh2cfeicjNhhpPlniHsp1IIjzVxiOyvpsjcjOglqnp3hOrY7ObSOrwBiCvEzMhwxedOPwRmTbUKLVKzVK71Vu8u2Z/kRhjDj6KxBizZ0r5B3r4Yy1HQmzZAAAAAElFTkSuQmCC" InformativeScreenshot="8166fcddf9175b290c1cb7f9508e0c7f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="828, 637, 270, 40" ElementType="Button" FriendlyName="'Solicitar acesso'" FullSelectorArgument="&lt;webctrl id='btnSolicitarAcesso' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl id='btnSolicitarAcesso' tag='BUTTON' type='button' class='aes-button-secondary submit stretch md-button md-ink-ripple' aaname='Solicitar acesso' check:innerText='SOLICITAR ACESSO' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                  </Sequence>
+                                </uix:NCheckState.IfExists>
+                                <uix:NCheckState.IfNotExists>
+                                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,185" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Error" Message="[&quot;Página não abriu&quot;]" />
+                                  </Sequence>
+                                </uix:NCheckState.IfNotExists>
+                                <uix:NCheckState.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/autenticacao/login" DesignTimeRectangle="807, 337, 314, 30" ElementType="InputBox" FriendlyName="'INPUT email'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' class='ng-pristine ng-untouched md-input ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern' aaname='E-mail' /&gt;" Guid="136bf0bc-d03c-42e8-924d-636237f4bde7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAT4AAAAiCAYAAADGW7VkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL+SURBVHhe7ZnbruMgDAD3/7+wykurvOWxX5DlZrCBkma32tMsMxJSiakNkTyH6vzaAQAmA/EBwHQgPgCYDsQHANOB+ABgOhAfAEwH4gOA6UB8ADAdiA8ApgPxAcB0ID4AmA7EBwDTcSHxPfd1ue23WzXuW4r/FNt+d/uI29CfAeBbuYb4tnuQ3LI+0wOhyPA7ZIP4AK5AI77nurhb1GpuV7VwwpoUu93urt0F3/jLvm7rvkh8WZ2eohDiehc36XTMjdoaQXq6Rkvcz/t54xk3l7rEfdicy+yjvW2Wd6Jlpz/3GJ21qqFjT/8+3TtIfwByPDyX74zfEQAU+uJzjZT7LjRbkUqMlyaz89TYQXZqrr4fZFOSV6KIzW+looSmG93X8HsLtZI03sxbnzELrzxwdaRunVvWS1zXqutq6rPpeV2jmsu563l+73VuABjRF18Wl+eosXXTtXErOkeWVaplk6WmTg3t10o8NXteLref9EDv+yhvc8YQU4JNZ6pTZMz6N8UX9lv+YBh6MV3jxf606LpnBoAu58TXNGDEy20kPnMTUeLTPzXtiBLw8Zird6Opap3I2xefFk9ffDbvOfG177XQj/lcY/HpOogP4H1+XnyDZvXxGFYSyNhnuvGP8jZnPBBfyOdlJ98x70GfuT2/0JdbpB9T50N8AB/ln/zUfSW+kQw8WXw94ao8dd2jvE18KD4lIOEPxBf2a2ooejFdA/EBfJST4ktx1aR23jb+SHyyXsd1ff85xrRcQ8CJQG51MWab/jjvOfHpM8X53/9zw63ON9P6DNUc8QF8lNPi84Q1ofn90MJo147F5xCJyahjeS7CiWs2tQeTXxjkPSc+R7iRSS4voLiXWFef2Z7/1bvs7Ulq5ph94YgP4IM04vs2yq1oTJSxlhcAQJ+vF5++CfX9l25R5vYEAPCaC4hPqH4m5qF/AgIAHHMh8QEAfAbEBwDTgfgAYDoQHwBMB+IDgOlAfAAwHVl8j8eDwWAw/ushcOMDgOlAfAAwGfv+GzRGGm77kyt2AAAAAElFTkSuQmCC" InformativeScreenshot="5689dad874abe0073ae820e7633c63c2.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="807, 320, 41, 17" ElementType="Text" FriendlyName="'E-mail'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='E-mail' check:innerText='E-mail' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAAVCAYAAADSM2daAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVEhL7ZStc4QwEMX71yJiMDEnYjCYmogYDKYCg46pQJ9BYM6cwZzAYM6ceU0WckC5fkDbdJjh3ezMMfuy+wPe8IQNaof2pR3al+7QpQoQBI9Koew9XlSqbq/QuJifFpZBQF/6vtEMOowkkiQZVYG693hRXXR78wrtd6HFuPvv+jPoEqqPUV5IcGb/M8TZGc1ZQ3JGcxmXKO6jW1RZjAN5TS+MkB6bruXioWwoV8UjR9X2hg/loE0xAalicHdt4HmsIEUHHhwyilqdHeiaCbtLQhB8iPRkx62AnpYzmyeTuxsZVWERHPQw+KJFd54WW1VIQ+uJoM0DvV0b1MccaT9HRSH56S2vgX4cD3f4XdHgIR4O0S0eZk2X345ymDGqX4b+TMuhu10cL6cbddvXaPCvgZ5/8r7K9XLoSaalAKPzP4Ce1/TAXMuhcT1DP3Py0FclH/mXQG9JO7Qv7dC+tEFo4A0NBoQv4rR9HwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NCheckState.Target>
+                              </uix:NCheckState>
+                            </Sequence>
+                          </ActivityAction>
+                        </uix:NApplicationCard.Body>
+                        <uix:NApplicationCard.TargetApp>
+                          <uix:TargetApp Area="1912, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ/SURBVDhPjZBLTxNhFIZPZ6bT6ZRpEBWNRlCJyk0Eb4AVEC8oWAW5CUbdoCs3LDTuNGJcuJOFJshCQmIiuDDxL5jQpSZEE9BoRDCFUmihA70wPb5tp1o1MZ7kyfmS+d7nnG8oXcFDMi0dlqXgQdkVqLAOLO6zTizslUILpZK+UCJ99hdLw/4i8ZS/UJSBmUItV9pouQpU27KXKuV7EHkD+60cKLfyYpnECDPC7C8ChaJ/fo/YP79b3AwIZwiqET5iy0Z/BpGBLTh4QJ7CFsOLZdbbENyEYBDTP0EQR4gRfj2/S9wCiPR6VQi5bHcgMSAxsMUInlGKLQSICJMJAgvCBQgPIBTxFYg8t0N4MrtNsJFeq1SGapTp0FGFIXoJSQ5ktOSSzUemKjENAtW3U3g8ly8wwgHvVksz6ceUR4D1OmUmVKtUQEh6nc2M/V6+XLCR8mY30bg3l9i7nl7Rygn725XjCq/UK6OQSJAlL4+NjSUoBtdAz088np4PvdffTF5y88Tllu+0etLuAwxRHzpBlCm4AfgvPJ70OUirDRA02Dl8Wu0LN9gp0qhmCq6Cb2DqD76a/T2Fz6jvwo0qR5rUkYjbIUXOOjIFGtj+D/Io0uToR4ijbsdM9JyjHFDMlPxXIVAVPe+YjjZncawla3StTcuJtWpkgMzibmcCAUjmOfUBGwgI3o1dyDLWWjXDaNdeGB1aSbzTKYB00AI2gCpQAhSQkiCUIBuTh9baIejQ2OjUpuIXnUPxLuctXOoFD8BT8BBcAfnAFHRA0JZkHabfh8CLyQwBcxfoThIGk+A5cINfG6QLQYJAQq9BeBDTP+KCDlbBF5DYoBok/0GqiH4AfValWAHcr0gAAAAASUVORK5CYII=" InformativeScreenshot="be1e42529c392afea6c4097d68e8c636.png" Selector="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" Url="[strUrlSite]" />
+                        </uix:NApplicationCard.TargetApp>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NApplicationCard>
+                    </Sequence>
+                  </TryCatch.Try>
+                  <TryCatch.Catches>
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="802,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ActivityAction x:TypeArguments="s:Exception">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                        </ActivityAction.Argument>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error" Message="[&quot;Erro ao realizar login: &quot;+exception.Message]" />
+                      </ActivityAction>
+                    </Catch>
+                  </TryCatch.Catches>
+                </TryCatch>
+              </Sequence>
+            </ActivityAction>
+          </ui:RetryScope.ActivityBody>
+          <ui:RetryScope.Condition>
+            <ActivityFunc x:TypeArguments="x:Boolean">
+              <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Raiz CNPJ'" sap:VirtualizedContainerService.HintSize="854,441" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="10" Version="V1">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="400,225" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,101" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Logou no site Enel SP&quot;]" />
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="400,225" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,101" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Não logou no site Enel SP&quot;]" />
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="https://portalhome.eneldistribuicaosp.com.br/#/trocar-instalacao" DesignTimeRectangle="338, 329, 567, 45" ElementType="Text" FriendlyName="'Raiz CNPJ'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Raiz CNPJ' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Raiz CNPJ' type='' tag='TH' class='' check:innerText='Raiz CNPJ' /&gt;" Guid="c3ca0b2b-66a4-4ba7-981a-607076f5bc89" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAjsAAAAxCAYAAAA80mgUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARCSURBVHhe7dy9bhNZGIDhXFtuIxdAsx3V9nRbUVFttRUVFQUSFSmgWHmLFSwEIbxaYmFCFIJD7Il/Pmbs8XhsTyCgeGMdPZ/0SPEZj2N3r86MvdPv9wMAIFU7rVYrAABStbP7qBMAAKkSOwBA0sQOAJA0sQMAJE3sAABJEzsAQNLEDgCQNLEDACRN7AAASRM7AEDSxA4AkDSxAwAkTewAAEkTOwBA0sQOAJA0sQMAJE3sAABJu57YeZlFLxpmMole7zzuPm045xIPz8pzz740Hr+Sp5/i4fEweuPytYoZj6N9/GXpvdw7Xjyh8/546TUWx4bxcLr2JdrlytIUn/FsEPdbi3N33w3Lg/NzAYCbcv2xM55ENsrVQ2MwiN+azmvw4LQ8//TnYmfvRT869f+dx0g2Kf8uZpwHSBkm9diJySge14Llm7FTvObqZ7zI4t5+eb7YAYCtce2x0363WL/19iKy6eoknr+pPX9jTqM174zxKJ68+hh70/Vu3H4ziKpfyvhaip18ss9n5fO/HTu949Py/+Vx9Wrx2Q/aszWxAwDbY6OxUw+E+frei/NoX9S2WoajaLVPqshYvYxVPV6dYRb3ynPm9v69KA8WcdVdOla4fTic7ciMhvH4r1rQVG9ncd5VY2f30VkclE+tPrvYAYCtsdmdnTw+Zjs742i9zNda/ehMH+ezdHlpEgftWWSsxk51WatUTUPsVIEyyuKPlWNNqufnr/Xsc/naxevuXzV2unGnCKhy3c4OAGyf/+GenUkcfzid7tz88nYQ7d4wDrqf49b03G7cz2NmOr2VnZy1G5S7cff9aBFPr9Z3bqpzG0KoyVLQ/JnHTPmw9/E07n68PHYap99f3JckdgBga1x/7DRMlofM7elz82A5HEavtkFTzeplq6XYqe+gNIdO4ad3dsoo+fVwVD4exZPuarDUYmd+g/LUONpHZ3FnfnNyQewAwNbY4GWso/j9ZB4T43j2d772Oqsu+VTBMA+fS2NnJXReH5Xr6/aqyPjBe3aqKPkUzwazlWw8f2PrsbN8z04DsQMAW2OzNyjX1//rLC4N9ftxpzi+fxJPzmdLzbGzHDrP3y7/Fs66y76N1Ylb/9S+kr72baxalKztUv1o7BwtLs2JHQC4cZuNnf3z6obkzmE3dquvouczWbmW1Rg7l106KlzEg/n/qfn+7+zkEfRituvTGDt5YC3Wi7l67FTvfT75Z5hdvgMAbspmY6f4WnYZGrNAyEPiw6iKj+x8EI/nYfG92Fmbb+yaXPILyp2T5V9zbo6d3H4vns9v3/nJ2MnOs+VfVQYAbsT1xA4AwJYSOwBA0sQOAJA0sQMAJE3sAABJEzsAQNLEDgCQNLEDACRN7AAASRM7AEDSxA4AkDSxAwAkTewAAEkTOwBA0sQOAJA0sQMAJG2n1WoFAECqdsIYY4wxJuERO8YYY4xJeCK+ArPcu+jwpUIYAAAAAElFTkSuQmCC" InformativeScreenshot="7e8c90682b034815465dd54cd3a6d890.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enel | Agência virtual' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="475, 297, 61, 17" ElementType="Text" FriendlyName="'Filtre por'" FullSelectorArgument="&lt;webctrl aaname='Filtre por:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Filtre por:' tag='LABEL' type='' class='' check:innerText='Filtre por:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAVCAYAAAAZ6IOkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJpSURBVFhH7ZUxa9tAFMf7Ve5D3Gi6mCxZ7NFkEHQwZDAFYwrBdDBZTMCYLiZQtBjTRYaCMnkoeFOgqJMyFGUw3BA0BDQENP77dHdSTpbcmKYJCdHwh/N7797d/fTe87skSfDWVUMg1RBINQRSDYFkQPAwZQysQtNL8l9Oad2Fs6H1xkE3WxvJXqtKELrzAFEUFRTfkf8uVus0tgRB7ZWw8nyvR2UIS1EIqNSbhWA+3FiLZbfUPjKHjrGXM1jvyX7sQFCe+MrB6EMTnOL4gYXRMlDVtSWZ99jGajlS+1kD1skCfmTE3QZwTi00ufK3+zOsxb3fm5D9zIH7SZ0nP9JtWt3xfQ7SoyEkcZp0hTHtHa90C8VZDEejTxcX+uCNix7n6M19CIoTvxwMW/T7e/lMBZejc+YiSPdfe7A/crDWDL6M8TFrMcpvw7smvwiw+mKB8x5cXaESAu/QvULVytTW0qY/SHbWg4MxL/FdEIy9hXbQEEybf34I1ncRZTGk6GIAdrRAaNhSSQhHNgLTfuNikOb8SRX1Y0QPHGOdAs9jQiwshsNzX/6uenCVHhyMciim/n+CYMboS2m4RU3hZfu0JISJV7Bl5wwuqIpku5QfKM/Q+8z13/T4dpD+/SCE8w7YiStbIQctQoS/RaE6Uv23Sng+COrw9mStHpjPhCKE5GaFIW9j+M1DKAH4cD63wawd7VA1E/LYPWfCNoQnGYzaH18tMDigS2Y5qiCkEmvM+m00KI7xJqxTB4E58bVUudtwv/by6V+K3effYQuCtO0ejC9Lu3r+KVRDINUQSC8WwnOqhkCqISQJ/gBFFEvwykO/fAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NCheckState.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NCheckState>
+            </ActivityFunc>
+          </ui:RetryScope.Condition>
+        </ui:RetryScope>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1149,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,101" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Não foi possível realizar o login&quot;]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>
